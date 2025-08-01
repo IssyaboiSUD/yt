@@ -476,7 +476,7 @@ export default function ProjectsPage() {
                   <div className={styles.metaItem}>
                     <Eye className={styles.metaIcon} />
                     <span>{selectedProject.views}</span>
-                  </div>
+            </div>
                   <div className={styles.metaItem}>
                     <Calendar className={styles.metaIcon} />
                     <span>{selectedProject.date}</span>
@@ -708,7 +708,7 @@ export default function ProjectsPage() {
                     >
                       <Download className={styles.linkIcon} />
                       Case Study
-                    </Link>
+              </Link>
                   </div>
                 </section>
               </div>
