@@ -1,0 +1,258 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: var(--background);
+  /* border-bottom: 1px solid var(--yt-border); */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 1000;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+}
+
+.menuButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  color: var(--foreground);
+  transition: background-color 0.2s;
+}
+
+.menuButton:hover {
+  background-color: var(--yt-hover);
+}
+
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--yt-red);
+  font-family: 'YouTube Sans', 'Roboto', sans-serif;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, var(--yt-red) 0%, #ff4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.logoText::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--yt-red) 0%, #ff4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.logoLink:hover .logoText::before {
+  opacity: 1;
+}
+
+.centerSection {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.searchForm {
+  width: 100%;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border: 1px solid var(--yt-border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.searchInput {
+  flex: 1;
+  height: 100%;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 16px;
+}
+
+.searchInput::placeholder {
+  color: var(--yt-gray);
+}
+
+.searchButton {
+  width: 64px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--yt-light-gray);
+  border-left: 1px solid var(--yt-border);
+  color: var(--foreground);
+  transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+  background: var(--yt-hover);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 200px;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.contactButton {
+  padding: 10px 16px;
+  background: var(--yt-red);
+  color: white;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.contactButton:hover {
+  background: var(--yt-dark-red);
+}
+
+.socialMenuContainer {
+  position: relative;
+}
+
+.socialButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  transition: background-color 0.2s;
+}
+
+.socialButton:hover {
+  background-color: var(--yt-hover);
+}
+
+.socialMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: var(--background);
+  border: 1px solid var(--yt-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+  z-index: 1001;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: var(--foreground);
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.socialLink:hover {
+  background-color: var(--yt-hover);
+}
+
+.socialLink:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.socialLink:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.themeToggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  transition: background-color 0.2s;
+  margin-right: 8px;
+}
+
+.themeToggle:hover {
+  background-color: var(--yt-hover);
+}
+
+.themeToggle svg {
+  transition: transform 0.2s ease;
+}
+
+.themeToggle:hover svg {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .centerSection {
+    margin: 0 16px;
+  }
+  
+  .rightSection {
+    min-width: auto;
+  }
+  
+  .contactButton {
+    display: none;
+  }
+  
+  .logoText {
+    font-size: 20px;
+  }
+} 

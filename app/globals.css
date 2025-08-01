@@ -1,13 +1,67 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f0f0f;
+  --yt-red: #ff0000;
+  --yt-dark-red: #cc0000;
+  --yt-gray: #606060;
+  --yt-light-gray: #f9f9f9;
+  --yt-border: #e5e5e5;
+  --yt-hover: #f2f2f2;
+  --sidebar-width: 240px;
+  --header-height: 56px;
 }
 
+/* Light theme (default) */
+.light {
+  --background: #ffffff;
+  --foreground: #0f0f0f;
+  --yt-red: #ff0000;
+  --yt-dark-red: #cc0000;
+  --yt-gray: #606060;
+  --yt-light-gray: #f9f9f9;
+  --yt-border: #e5e5e5;
+  --yt-hover: #f2f2f2;
+}
+
+/* Dark theme */
+.dark {
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --yt-red: #ff0000;
+  --yt-dark-red: #cc0000;
+  --yt-gray: #aaa;
+  --yt-light-gray: #282828;
+  --yt-border: #383838;
+  --yt-hover: #383838;
+}
+
+/* Fallback for users who haven't loaded the theme yet */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light):not(.dark) {
+    --background: #0f0f0f;
+    --foreground: #ffffff;
+    --yt-gray: #aaa;
+    --yt-light-gray: #282828;
+    --yt-border: #383838;
+    --yt-hover: #383838;
   }
+}
+
+/* Netflix theme */
+.netflix {
+  --background: #141414;
+  --foreground: #fff;
+  --netflix-red: #e50914;
+  --netflix-dark: #181818;
+  --netflix-gray: #b3b3b3;
+  --netflix-border: #333;
+  --netflix-hover: #222;
+  --yt-red: #e50914;
+  --yt-dark-red: #b0060f;
+  --yt-gray: #b3b3b3;
+  --yt-light-gray: #181818;
+  --yt-border: #333;
+  --yt-hover: #222;
 }
 
 html,
@@ -19,9 +73,12 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -35,8 +92,19 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
-  html {
+  html:not(.light):not(.dark) {
     color-scheme: dark;
   }
 }

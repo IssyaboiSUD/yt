@@ -1,0 +1,559 @@
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+  background: #f3f2ef;
+  min-height: 100vh;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.containerDark {
+  background: #1a1a1a !important;
+}
+
+.header {
+  background: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.headerDark {
+  background: #2a2a2a !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+.coverPhoto {
+  height: 300px;
+  background: url('https://media.licdn.com/dms/image/v2/D4E16AQFuXMm0cJgMwQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1707472852418?e=1756944000&v=beta&t=Ob86KYZROUzz4rJdOIPAJYlc_djbQPyKmhy9y5PXIcM') center center;
+  background-size: cover;
+  position: relative;
+}
+
+.profileImage {
+  position: absolute;
+  bottom: -70px;
+  left: 30px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid var(--background);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileInfo {
+  padding: 80px 30px 24px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.nameDark {
+  color: #ffffff !important;
+}
+
+.title {
+  font-size: 16px;
+  color: #191919;
+  margin: 0 0 2px 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.titleDark {
+  color: #ffffff !important;
+}
+
+/* Ensure the title class in dark mode overrides any other styles */
+.containerDark .titleDark {
+  color: #ffffff !important;
+}
+
+.company {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+}
+
+.locationInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.locationInfoDark {
+  color: #ffffff !important;
+}
+
+.locationInfoDark span {
+  color: #ffffff !important;
+}
+
+.separator {
+  color: #666666;
+}
+
+.separatorDark {
+  color: #a1a1a6 !important;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666666;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.contactLinkDark {
+  color: #a1a1a6 !important;
+}
+
+.contactLinkDark span {
+  color: #a1a1a6 !important;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.connectButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: #0a66c2;
+  color: white;
+  text-decoration: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.messageButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: transparent;
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.messageButtonDark {
+  color: #60a5fa !important;
+  border-color: #60a5fa !important;
+}
+
+.messageButtonDark span {
+  color: #60a5fa !important;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section {
+  background: var(--background);
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  padding: 24px;
+}
+
+.sectionDark {
+  background: #2a2a2a !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.sectionTitleDark {
+  color: #ffffff !important;
+}
+
+.aboutText {
+  color: #191919;
+  line-height: 1.4;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.aboutTextDark {
+  color: #ffffff !important;
+}
+
+.experienceList,
+.educationList {
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceItem,
+.educationItem {
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0;
+}
+
+.experienceItemDark,
+.educationItemDark {
+  border-bottom-color: #404040 !important;
+}
+
+.experienceItem:last-child,
+.educationItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.experienceItem:first-child,
+.educationItem:first-child {
+  padding-top: 0;
+}
+
+.experienceHeader,
+.educationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.experienceTitle h3,
+.educationTitle h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.experienceTitleDark h3,
+.educationTitleDark h3 {
+  color: #ffffff !important;
+}
+
+/* Ensure the education title in dark mode overrides any other styles */
+.containerDark .educationTitleDark h3 {
+  color: #ffffff !important;
+}
+
+/* Add even more specific selectors for job titles and degree names */
+.containerDark .experienceTitleDark h3,
+.containerDark .educationTitleDark h3 {
+  color: #ffffff !important;
+}
+
+/* Target the specific h3 elements directly */
+.containerDark .experienceTitle h3,
+.containerDark .educationTitle h3 {
+  color: #ffffff !important;
+}
+
+/* Most specific selectors to override any conflicting styles */
+.containerDark .sectionDark .experienceTitleDark h3,
+.containerDark .sectionDark .educationTitleDark h3 {
+  color: #ffffff !important;
+}
+
+.containerDark .sectionDark .experienceTitle h3,
+.containerDark .sectionDark .educationTitle h3 {
+  color: #ffffff !important;
+}
+
+.companyInfo,
+.schoolInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.companyInfoDark,
+.schoolInfoDark {
+  color: #ffffff !important;
+}
+
+.companyInfoDark span,
+.schoolInfoDark span {
+  color: #ffffff !important;
+}
+
+.experienceMeta,
+.educationMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.location,
+.duration,
+.gpa {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.locationDark,
+.durationDark {
+  color: #a1a1a6 !important;
+}
+
+.locationDark span,
+.durationDark span {
+  color: #a1a1a6 !important;
+}
+
+.experienceDescription,
+.educationDescription {
+  color: #191919;
+  line-height: 1.4;
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.experienceDescriptionDark,
+.educationDescriptionDark {
+  color: #ffffff !important;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.achievementsDark {
+  color: #ffffff !important;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 4px;
+  color: #191919;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.achievementItemDark {
+  color: #ffffff !important;
+}
+
+.achievements li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #666666;
+  font-weight: 400;
+}
+
+.achievementsDark li::before {
+  color: #a1a1a6 !important;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.skillsList,
+.languagesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillItem,
+.languageItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.skillItemDark,
+.languageItemDark {
+  border-bottom-color: #404040 !important;
+}
+
+.skillItem:last-child,
+.languageItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.skillItem:first-child,
+.languageItem:first-child {
+  padding-top: 0;
+}
+
+.skillInfo,
+.languageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skillName,
+.languageName {
+  font-weight: 600;
+  color: #191919;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.skillNameDark,
+.languageNameDark {
+  color: #ffffff !important;
+}
+
+.skillLevel,
+.languageLevel {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.skillLevelDark,
+.languageLevelDark {
+  color: #a1a1a6 !important;
+}
+
+.proficiencyBars {
+  display: flex;
+  gap: 2px;
+}
+
+.proficiencyBar {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e0e0e0;
+}
+
+.proficiencyBarDark {
+  background: #404040 !important;
+}
+
+.proficiencyBar.filled {
+  background: #0a66c2;
+}
+
+.proficiencyBar.filled.proficiencyBarDark {
+  background: #60a5fa !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background: var(--background);
+  }
+  
+  .containerDark {
+    background: #1a1a1a !important;
+  }
+  
+  .profileInfo {
+    padding: 45px 20px 20px;
+  }
+  
+  .name {
+    font-size: 20px;
+  }
+  
+  .title {
+    font-size: 14px;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+  }
+  
+  .section {
+    padding: 16px;
+  }
+  
+  .experienceHeader,
+  .educationHeader {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .experienceMeta,
+  .educationMeta {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skillItem,
+  .languageItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .proficiencyBars {
+    align-self: flex-end;
+  }
+} 
