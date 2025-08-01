@@ -26,7 +26,7 @@
 
 .coverPhoto {
   height: 300px;
-  background: url('https://media.licdn.com/dms/image/v2/D4E16AQFuXMm0cJgMwQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1707472852418?e=1756944000&v=beta&t=Ob86KYZROUzz4rJdOIPAJYlc_djbQPyKmhy9y5PXIcM') center center;
+  background: url('/cover.jpeg') center center;
   background-size: cover;
   position: relative;
 }

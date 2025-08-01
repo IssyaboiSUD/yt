@@ -78,7 +78,7 @@ export default function AboutPage() {
           <div className={styles.coverPhoto}>
             <div className={styles.profileImage}>
               <img 
-                src="https://media.licdn.com/dms/image/v2/D4E03AQGV3w2pdk1Sag/profile-displayphoto-scale_400_400/B4EZgZIE19HIAg-/0/1752768204930?e=1756944000&v=beta&t=EDJAHRxokucvxwTkVeJcrrffoCNWObvfyTLGNrl3SNM" 
+                src="/profile.jpeg" 
                 alt="Sudarshan Profile"
               />
             </div>
