@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Header from '../components/Header';
 import { ArrowLeft, Github, ExternalLink, Download, Calendar, Eye, Code, Zap, Target, Award } from 'lucide-react';
@@ -395,7 +395,7 @@ const projects = [
   }
 ];
 
-export default function ProjectsPage() {
+function ProjectsContent() {
   const searchParams = useSearchParams();
   const selectedId = searchParams.get('selected');
   const [selectedProject, setSelectedProject] = useState(projects[0]);
@@ -717,5 +717,13 @@ export default function ProjectsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsContent />
+    </Suspense>
   );
 } 
