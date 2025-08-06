@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Menu, Search, Sun, Moon } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -102,7 +102,9 @@ export default function Header({ sidebarCollapsed, onToggleSidebar }: HeaderProp
         )}
         <Link href="/" className={styles.logoLink}>
           <div className={styles.logo}>
-            <span className={styles.logoText}>Sudarshan</span>
+            <span className={styles.logoText}>
+              SUDARSHAN
+            </span>
           </div>
         </Link>
       </div>

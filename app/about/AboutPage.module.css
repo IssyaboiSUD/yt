@@ -214,6 +214,12 @@
   color: #ffffff !important;
 }
 
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .aboutText {
   color: #191919;
   line-height: 1.4;
@@ -226,279 +232,295 @@
   color: #ffffff !important;
 }
 
-.experienceList,
-.educationList {
+/* LinkedIn Style Experience */
+.experienceItem {
   display: flex;
   flex-direction: column;
-}
-
-.experienceItem,
-.educationItem {
-  padding: 16px 0;
-  border-bottom: 1px solid #e0e0e0;
+  gap: 12px;
+  padding: 0;
+  border-bottom: none;
   margin: 0;
 }
 
-.experienceItemDark,
-.educationItemDark {
-  border-bottom-color: #404040 !important;
-}
-
-.experienceItem:last-child,
-.educationItem:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.experienceItem:first-child,
-.educationItem:first-child {
-  padding-top: 0;
-}
-
-.experienceHeader,
-.educationHeader {
+.companyInfo {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 8px;
+  gap: 12px;
 }
 
-.experienceTitle h3,
-.educationTitle h3 {
+.companyLogo {
+  flex-shrink: 0;
+}
+
+.logoImage {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.logoPlaceholder {
+  width: 56px;
+  height: 56px;
+  background: #0a66c2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.companyDetails {
+  flex: 1;
+}
+
+.jobTitle {
   font-size: 16px;
   font-weight: 600;
   color: #191919;
   margin: 0 0 4px 0;
-  line-height: 1.2;
 }
 
-.experienceTitleDark h3,
-.educationTitleDark h3 {
+.jobTitleDark {
   color: #ffffff !important;
 }
 
-/* Ensure the education title in dark mode overrides any other styles */
-.containerDark .educationTitleDark h3 {
-  color: #ffffff !important;
-}
-
-/* Add even more specific selectors for job titles and degree names */
-.containerDark .experienceTitleDark h3,
-.containerDark .educationTitleDark h3 {
-  color: #ffffff !important;
-}
-
-/* Target the specific h3 elements directly */
-.containerDark .experienceTitle h3,
-.containerDark .educationTitle h3 {
-  color: #ffffff !important;
-}
-
-/* Most specific selectors to override any conflicting styles */
-.containerDark .sectionDark .experienceTitleDark h3,
-.containerDark .sectionDark .educationTitleDark h3 {
-  color: #ffffff !important;
-}
-
-.containerDark .sectionDark .experienceTitle h3,
-.containerDark .sectionDark .educationTitle h3 {
-  color: #ffffff !important;
-}
-
-.companyInfo,
-.schoolInfo {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #666666;
+.companyName {
   font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
+  color: #191919;
+  margin: 0 0 4px 0;
 }
 
-.companyInfoDark,
-.schoolInfoDark {
+.companyNameDark {
   color: #ffffff !important;
 }
 
-.companyInfoDark span,
-.schoolInfoDark span {
-  color: #ffffff !important;
+.employmentType {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 4px 0;
 }
 
-.experienceMeta,
-.educationMeta {
+.employmentTypeDark {
+  color: #a1a1a6 !important;
+}
+
+.dates {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 4px 0;
+}
+
+.datesDark {
+  color: #a1a1a6 !important;
+}
+
+.location {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.locationDark {
+  color: #a1a1a6 !important;
+}
+
+/* LinkedIn Style Education */
+.educationItem {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  align-items: flex-end;
-  text-align: right;
-}
-
-.location,
-.duration,
-.gpa {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #666666;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-.locationDark,
-.durationDark {
-  color: #a1a1a6 !important;
-}
-
-.locationDark span,
-.durationDark span {
-  color: #a1a1a6 !important;
-}
-
-.experienceDescription,
-.educationDescription {
-  color: #191919;
-  line-height: 1.4;
-  margin: 8px 0;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.experienceDescriptionDark,
-.educationDescriptionDark {
-  color: #ffffff !important;
-}
-
-.achievements {
-  list-style: none;
+  gap: 12px;
   padding: 0;
-  margin: 8px 0 0 0;
-}
-
-.achievementsDark {
-  color: #ffffff !important;
-}
-
-.achievements li {
-  position: relative;
-  padding-left: 16px;
-  margin-bottom: 4px;
-  color: #191919;
-  line-height: 1.4;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.achievementItemDark {
-  color: #ffffff !important;
-}
-
-.achievements li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #666666;
-  font-weight: 400;
-}
-
-.achievementsDark li::before {
-  color: #a1a1a6 !important;
-}
-
-.skillsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 8px;
-}
-
-.skillsList,
-.languagesList {
-  display: flex;
-  flex-direction: column;
-}
-
-.skillItem,
-.languageItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.skillItemDark,
-.languageItemDark {
-  border-bottom-color: #404040 !important;
-}
-
-.skillItem:last-child,
-.languageItem:last-child {
   border-bottom: none;
-  padding-bottom: 0;
+  margin: 0;
 }
 
-.skillItem:first-child,
-.languageItem:first-child {
-  padding-top: 0;
-}
-
-.skillInfo,
-.languageInfo {
+.institutionInfo {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  gap: 12px;
 }
 
-.skillName,
-.languageName {
+.institutionLogo {
+  flex-shrink: 0;
+}
+
+.institutionLogo .logoImage {
+  border-radius: 4px;
+}
+
+.institutionLogo .logoPlaceholder {
+  background: #057642;
+}
+
+.institutionDetails {
+  flex: 1;
+}
+
+.institutionName {
+  font-size: 16px;
   font-weight: 600;
   color: #191919;
-  font-size: 14px;
-  line-height: 1.2;
+  margin: 0 0 4px 0;
 }
 
-.skillNameDark,
+.institutionNameDark {
+  color: #ffffff !important;
+}
+
+.degree {
+  font-size: 14px;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.degreeDark {
+  color: #ffffff !important;
+}
+
+/* LinkedIn Style Certifications */
+.certificationItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.certificationInfo {
+  display: flex;
+  gap: 12px;
+}
+
+.certificationLogo {
+  flex-shrink: 0;
+}
+
+.certificationLogo .logoImage {
+  border-radius: 50%;
+}
+
+.certificationLogo .logoPlaceholder {
+  background: #0ea5e9;
+  border-radius: 50%;
+}
+
+.certificationDetails {
+  flex: 1;
+}
+
+.certificationName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.certificationNameDark {
+  color: #ffffff !important;
+}
+
+.organization {
+  font-size: 14px;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.organizationDark {
+  color: #ffffff !important;
+}
+
+.issueDate {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.issueDateDark {
+  color: #a1a1a6 !important;
+}
+
+.credentialButton {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.credentialButton:hover {
+  background: #004182;
+}
+
+/* LinkedIn Style Skills */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  border-bottom: none;
+  margin: 0;
+}
+
+.skillName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+}
+
+.skillNameDark {
+  color: #ffffff !important;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 8px 0;
+}
+
+.separatorDark {
+  background: #404040 !important;
+}
+
+/* LinkedIn Style Languages */
+.languageItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  border-bottom: none;
+  margin: 0;
+}
+
+.languageName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+}
+
 .languageNameDark {
   color: #ffffff !important;
 }
 
-.skillLevel,
-.languageLevel {
-  font-size: 12px;
-  color: #666666;
-  font-weight: 400;
-  line-height: 1.2;
+.languageProficiency {
+  font-size: 14px;
+  color: #666;
 }
 
-.skillLevelDark,
-.languageLevelDark {
+.languageProficiencyDark {
   color: #a1a1a6 !important;
-}
-
-.proficiencyBars {
-  display: flex;
-  gap: 2px;
-}
-
-.proficiencyBar {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #e0e0e0;
-}
-
-.proficiencyBarDark {
-  background: #404040 !important;
-}
-
-.proficiencyBar.filled {
-  background: #0a66c2;
-}
-
-.proficiencyBar.filled.proficiencyBarDark {
-  background: #60a5fa !important;
 }
 
 @media (max-width: 768px) {
@@ -530,30 +552,22 @@
     padding: 16px;
   }
   
-  .experienceHeader,
-  .educationHeader {
+  .companyInfo,
+  .institutionInfo,
+  .certificationInfo {
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
   }
   
-  .experienceMeta,
-  .educationMeta {
-    align-items: flex-start;
-    text-align: left;
+  .logoPlaceholder,
+  .logoImage {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
   }
   
   .skillsGrid {
     grid-template-columns: 1fr;
-  }
-  
-  .skillItem,
-  .languageItem {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  
-  .proficiencyBars {
-    align-self: flex-end;
+    gap: 12px;
   }
 } 

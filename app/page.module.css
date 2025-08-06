@@ -48,6 +48,390 @@
   margin-left: 72px;
 }
 
+/* Hero Section */
+.heroSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  margin-bottom: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.heroSectionDark {
+  background: #000000;
+}
+
+.heroText {
+  text-align: center;
+}
+
+.heroMessage {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 50%, #FF2D92 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  animation: fadeInOut 2s ease-in-out, gradientMove 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.profileContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.section {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 24px;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0;
+}
+
+.sectionActions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  color: #666;
+  transition: background-color 0.2s;
+}
+
+.actionButton:hover {
+  background-color: #f3f2ef;
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Experience Styles */
+.experienceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.companyInfo {
+  display: flex;
+  gap: 12px;
+}
+
+.companyLogo {
+  flex-shrink: 0;
+}
+
+.logoPlaceholder {
+  width: 56px;
+  height: 56px;
+  background: #0a66c2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.companyDetails {
+  flex: 1;
+}
+
+.jobTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.companyName {
+  font-size: 14px;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.employmentType {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 4px 0;
+}
+
+.dates {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 4px 0;
+}
+
+.location {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.skillIcon {
+  font-size: 12px;
+}
+
+.skillText {
+  color: #666;
+}
+
+/* Education Styles */
+.educationItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.institutionInfo {
+  display: flex;
+  gap: 12px;
+}
+
+.institutionLogo {
+  flex-shrink: 0;
+}
+
+.institutionLogo .logoPlaceholder {
+  background: #057642;
+}
+
+.institutionName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.degree {
+  font-size: 14px;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+/* Certification Styles */
+.certificationItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.certificationInfo {
+  display: flex;
+  gap: 12px;
+}
+
+.certificationLogo {
+  flex-shrink: 0;
+}
+
+.certificationLogo .logoPlaceholder {
+  background: #0ea5e9;
+  border-radius: 50%;
+}
+
+.certificationName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.organization {
+  font-size: 14px;
+  color: #191919;
+  margin: 0 0 4px 0;
+}
+
+.issueDate {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.credentialButton {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+}
+
+.credentialButton:hover {
+  background: #004182;
+}
+
+/* Skills Styles */
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+}
+
+.skillCompany {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.companyLogoSmall {
+  flex-shrink: 0;
+}
+
+.logoPlaceholderSmall {
+  width: 24px;
+  height: 24px;
+  background: #0a66c2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 10px;
+  border-radius: 2px;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 8px 0;
+}
+
+/* Languages Styles */
+.languageItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.languageName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+}
+
+.languageProficiency {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding: 16px;
+  }
+  
+  .profileContainer {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .section {
+    padding: 16px;
+  }
+  
+  .companyInfo,
+  .institutionInfo,
+  .certificationInfo {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .logoPlaceholder {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+}
+
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -60,6 +444,16 @@
   .content {
     margin-left: 0;
     padding: 16px;
+  }
+  
+  .heroSection {
+    min-height: 150px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .heroMessage {
+    font-size: 2rem;
   }
   
   .projectsGrid {

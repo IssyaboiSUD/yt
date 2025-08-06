@@ -50,6 +50,8 @@
 .logo {
   display: flex;
   align-items: center;
+  width: 180px; /* Fixed width to prevent layout shifts */
+  justify-content: flex-start;
 }
 
 .logoText {
@@ -64,26 +66,10 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
+  display: inline-block;
 }
 
-.logoText::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, var(--yt-red) 0%, #ff4444 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
 
-.logoLink:hover .logoText::before {
-  opacity: 1;
-}
 
 .centerSection {
   flex: 1 1 0;
@@ -91,6 +77,10 @@
   justify-content: center;
   max-width: 640px;
   margin: 0 auto;
+  transform: translateX(60px);
+  position: relative;
+  left: 0;
+  right: 0;
 }
 
 .searchForm {

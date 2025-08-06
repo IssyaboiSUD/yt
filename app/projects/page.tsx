@@ -11,116 +11,136 @@ import { useTheme } from '../contexts/ThemeContext';
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    tagline: "A full-stack e-commerce solution built with React and Node.js",
-    heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop",
-    thumbnail: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=320&h=180&fit=crop",
-    views: "1.2K views",
-    date: "2 weeks ago",
+    title: "AI-Based Talent Matching System",
+    tagline: "Semantic AI-powered employee matching for project staffing",
+    heroImage: "/hiring.jpg", 
+    thumbnail: "/ai.png",
+    views: "3.2K views",
+    date: "2 months ago",
     overview: {
-      what: "A comprehensive e-commerce platform that provides a seamless shopping experience for both customers and administrators.",
-      why: "To create a modern, scalable e-commerce solution that handles the complete customer journey from browsing to checkout.",
-      role: "Full-stack developer responsible for frontend, backend, database design, and deployment."
+      what: "An AI agent that intelligently recommends employees for project staffing by analyzing skill profiles and Jira project request data.",
+      why: "To streamline the employee allocation process and reduce manual effort in talent matching using semantic AI.",
+      role: "Full-stack developer and ML engineer responsible for backend AI integration, API design, and frontend UI."
     },
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe", "JWT"],
+    technologies: [
+      "Python",
+      "AWS Bedrock",
+      "LangChain",
+      "FAISS",
+      "Next.js",
+      "Jira API",
+      "REST APIs",
+      "Tailwind CSS"
+    ],
     features: [
-      "User authentication and authorization",
-      "Product catalog with search and filtering",
-      "Shopping cart and checkout process",
-      "Secure payment integration",
-      "Admin dashboard for inventory management",
-      "Order tracking and management"
+      "Automated employee recommendations for project requests (AFRAs)",
+      "Semantic skill matching using Titan Embeddings and FAISS",
+      "AI scoring and explanation generation via AWS Bedrock (Claude) and LangChain",
+      "Responsive Next.js frontend for querying and displaying match results",
+      "Match percentage and explanation of skill fit or gaps",
+      "Integrated with Jira for live project request data"
     ],
     process: [
       {
-        phase: "Research & Planning",
-        description: "Analyzed existing e-commerce solutions and identified key features needed for a modern platform."
+        phase: "Model Research",
+        description: "Explored semantic search techniques and evaluated embedding models including AWS Titan for skill matching."
       },
       {
-        phase: "Design & Prototyping",
-        description: "Created wireframes and user flows focusing on intuitive navigation and seamless checkout experience."
+        phase: "Data Integration",
+        description: "Connected Jira APIs to ingest project request (AFRA) data and internal employee profiles."
       },
       {
-        phase: "Development",
-        description: "Built the application using React for frontend, Node.js/Express for backend, and MongoDB for data storage."
+        phase: "Embedding & Indexing",
+        description: "Generated vector embeddings of skills and indexed them in FAISS for fast similarity search."
       },
       {
-        phase: "Testing & Deployment",
-        description: "Implemented comprehensive testing and deployed to production with CI/CD pipeline."
+        phase: "Scoring & Explanation",
+        description: "Used LangChain to orchestrate prompts and AWS Claude models to generate match scores and detailed justifications."
+      },
+      {
+        phase: "Frontend Development",
+        description: "Built a Next.js application for querying AFRA numbers and displaying ranked employee matches with explanations."
       }
     ],
     challenges: [
-      {
-        challenge: "Payment Security",
-        solution: "Implemented Stripe with proper security measures and PCI compliance."
+      { 
+        challenge: "Unstructured Skill Data",
+        solution: "Used embedding-based semantic comparison instead of brittle keyword matching."
       },
       {
-        challenge: "Scalability",
-        solution: "Used microservices architecture and implemented caching strategies for better performance."
+        challenge: "Prompt Quality for Explanation",
+        solution: "Refined prompts iteratively to improve Claude's explanation clarity and accuracy."
       },
       {
-        challenge: "Real-time Updates",
-        solution: "Integrated WebSocket connections for live inventory updates and order status changes."
+        challenge: "Scaling FAISS for large profiles",
+        solution: "Used indexed vector shards and optimized search configurations to keep query latency low."
       }
     ],
     outcome: {
-      metrics: "50% faster checkout process, 30% increase in conversion rate",
-      impact: "Successfully launched with 1000+ active users and $50K+ in monthly transactions"
+      metrics: "Top-5 employee match accuracy of 91% on validation data, reduced staffing decision time by 50%",
+      impact: "Helped streamline internal staffing workflows and improved project-team fit across departments"
     },
     links: {
-      github: "https://github.com/yourusername/ecommerce-platform",
-      demo: "https://demo-ecommerce-platform.vercel.app",
-      caseStudy: "/case-studies/ecommerce-platform.pdf"
+      github: "https://github.com/yourusername/ai-chat-assistant",  
+      demo: "https://ai-chat-demo.vercel.app",
+      caseStudy: "/case-studies/ai-chat-assistant.pdf"
     }
   },
   {
     id: 2,
-    title: "Task Management App",
-    tagline: "A collaborative task management application with real-time updates",
-    heroImage: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=600&fit=crop",
-    thumbnail: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=320&h=180&fit=crop",
-    views: "856 views",
-    date: "1 month ago",
+    title: "Next.js To-Do App",
+    tagline: "Simple and modern task management built with React and Next.js",
+    heroImage: "/todo-hero.jpg",
+    thumbnail: "/todo-thumb.png",
+    views: "1.1K views",
+    date: "2 weeks ago",
     overview: {
-      what: "A real-time collaborative task management application designed for teams to organize and track their work efficiently.",
-      why: "To solve the problem of scattered task management and improve team productivity through centralized, real-time collaboration.",
-      role: "Lead developer responsible for architecture, real-time features, and team coordination."
+      what: "A clean and minimalistic To-Do application that allows users to create, manage, and delete tasks efficiently with a sleek UI.",
+      why: "To provide a fast and user-friendly task management experience with modern web technologies.",
+      role: "Full-stack developer responsible for designing the UI, implementing frontend React components, and deploying the app on Vercel."
     },
-    technologies: ["React", "Firebase", "Material-UI", "React DnD", "Socket.io"],
+    technologies: [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "CSS Modules",
+      "Vercel"
+      ],
     features: [
-      "Real-time task updates and collaboration",
-      "Drag-and-drop task organization",
-      "Team member assignment and roles",
-      "Progress tracking and analytics",
-      "Deadline management with notifications",
-      "File attachment and comments"
+      "Add new tasks with real-time input",
+      "Mark tasks as completed or delete them",
+      "Responsive and clean user interface",
+      "Client-side state management for smooth UX",
+      "Optimized for fast loading and deployment on Vercel",
+      
     ],
     process: [
       {
-        phase: "User Research",
-        description: "Interviewed 20+ project managers to understand pain points in current task management tools."
+        phase: "UI Design",
+        description: "Designed a minimalistic and intuitive user interface focused on ease of task management."
       },
       {
-        phase: "UX Design",
-        description: "Designed intuitive drag-and-drop interface with clear visual hierarchy and status indicators."
+        phase: "Frontend Implementation",
+        description: "Built the app using React components and Next.js for server-side rendering and routing."
       },
       {
-        phase: "Real-time Implementation",
-        description: "Built real-time collaboration using Firebase and Socket.io for instant updates across all users."
+        phase: "State Management",
+        description: "Implemented client-side state to handle adding, completing, and deleting tasks dynamically."
       },
       {
-        phase: "Testing & Launch",
-        description: "Conducted beta testing with 5 teams and launched with feedback-driven improvements."
+        phase: "Deployment",
+        description: "Deployed the app on Vercel for fast global delivery and continuous integration."
       }
     ],
     challenges: [
       {
-        challenge: "Real-time Synchronization",
-        solution: "Implemented conflict resolution strategies and optimistic updates for smooth user experience."
+        challenge: "Maintaining fast UI updates",
+        solution: "Used React state hooks effectively to update the task list without reloading."
       },
       {
-        challenge: "Performance with Large Datasets",
-        solution: "Used virtualization for task lists and implemented efficient data fetching patterns."
+        challenge: "Ensuring responsive design",
+        solution: "Applied CSS modules and flexible layouts to provide a seamless experience on all devices."
       },
       {
         challenge: "Mobile Responsiveness",
@@ -267,130 +287,62 @@ const projects = [
   },
   {
     id: 5,
-    title: "Fitness Tracking App",
-    tagline: "Mobile app for tracking workouts and fitness goals",
-    heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop",
-    thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=320&h=180&fit=crop",
-    views: "3.2K views",
-    date: "2 months ago",
+    title: "Othello Game with AI Opponent",
+    tagline: "Java-based Reversi game with AI strategy and graphical interface",
+    heroImage: "/othello.jpg",
+    thumbnail: "/oth.png",
+    views: "1.9K views",
+    date: "6 months ago",
     overview: {
-      what: "A comprehensive fitness tracking mobile application designed to help users achieve their health and fitness goals.",
-      why: "To create a motivating and comprehensive fitness platform that goes beyond basic workout tracking.",
-      role: "Mobile developer focused on React Native development, health integrations, and user experience."
+      what: "A fully functional Othello (Reversi) game featuring a JavaFX GUI and an intelligent AI opponent.",
+      why: "To deepen understanding of game theory and adversarial search while building an interactive desktop application.",
+      role: "Sole developer responsible for game logic, AI implementation, and GUI design."
     },
-    technologies: ["React Native", "Firebase", "Redux", "Health APIs", "Video Streaming", "Push Notifications"],
+    technologies: ["Java", "JavaFX", "Minimax", "Alpha-Beta Pruning"],
     features: [
-      "Workout planning and scheduling",
-      "Progress tracking with photos and metrics",
-      "Nutrition and calorie tracking",
-      "Social features and challenges",
-      "Wearable device integration",
-      "Video workout guides and tutorials"
+      "Classic 8x8 Othello board with legal move logic",
+      "Turn-based gameplay with disc flipping mechanics",
+      "AI opponent using Minimax algorithm with Alpha-Beta pruning",
+      "Difficulty scaling via search depth adjustment",
+      "Real-time move highlighting and game-over detection",
+      "Responsive JavaFX GUI with dynamic board updates"
     ],
     process: [
       {
-        phase: "User Research",
-        description: "Conducted interviews with fitness enthusiasts to understand their tracking needs and pain points."
+        phase: "Game Rules Implementation",
+        description: "Programmed all core game mechanics including turn validation, disc flipping, and win conditions."
       },
       {
-        phase: "Mobile Design",
-        description: "Designed intuitive mobile interface optimized for one-handed use during workouts."
+        phase: "AI Algorithm Design",
+        description: "Implemented Minimax algorithm enhanced with Alpha-Beta pruning to optimize AI move selection."
       },
       {
-        phase: "Health Integration",
-        description: "Integrated with Apple Health and Google Fit for seamless data synchronization."
-      },
-      {
-        phase: "Social Features",
-        description: "Built community features including challenges, leaderboards, and social sharing."
+        phase: "GUI Development",
+        description: "Designed and implemented the user interface using JavaFX for board rendering and interactivity."
       }
     ],
     challenges: [
       {
-        challenge: "Cross-platform Compatibility",
-        solution: "Used React Native with platform-specific optimizations for consistent experience."
+        challenge: "Managing valid move detection efficiently",
+        solution: "Optimized board scanning with direction vectors and early pruning logic."
       },
       {
-        challenge: "Health Data Privacy",
-        solution: "Implemented secure data handling and user consent mechanisms for health information."
+        challenge: "AI performance at higher depths",
+        solution: "Used Alpha-Beta pruning to cut unnecessary branches and improve evaluation speed."
       },
       {
-        challenge: "Offline Functionality",
-        solution: "Built offline-first architecture with local data storage and sync capabilities."
+        challenge: "Synchronizing UI updates with game state",
+        solution: "Applied JavaFX threading best practices to keep UI responsive during AI computation."
       }
     ],
     outcome: {
-      metrics: "100K+ downloads, 70% user retention after 30 days",
-      impact: "Helped users lose 50,000+ pounds collectively with 4.9/5 star rating"
+      metrics: "Played over 200+ simulated games; AI consistently achieved win rates above 70% at depth 4+.",
+      impact: "Recognized as one of the top final projects in the class; strengthened knowledge of AI search and Java GUI design."
     },
     links: {
-      github: "https://github.com/yourusername/fitness-tracking-app",
-      demo: "https://fitness-app-demo.vercel.app",
-      caseStudy: "/case-studies/fitness-tracking-app.pdf"
-    }
-  },
-  {
-    id: 6,
-    title: "AI Chat Assistant",
-    tagline: "Intelligent chatbot powered by machine learning algorithms",
-    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
-    thumbnail: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=320&h=180&fit=crop",
-    views: "4.7K views",
-    date: "3 months ago",
-    overview: {
-      what: "An intelligent AI-powered chatbot that provides personalized assistance and support across various domains.",
-      why: "To create a conversational AI that can understand context and provide helpful, accurate responses.",
-      role: "AI/ML developer responsible for NLP models, conversation flow, and system architecture."
-    },
-    technologies: ["Python", "TensorFlow", "OpenAI API", "FastAPI", "PostgreSQL", "Docker"],
-    features: [
-      "Natural language processing and understanding",
-      "Context-aware conversations",
-      "Multi-language support",
-      "Sentiment analysis and emotion detection",
-      "Integration with external APIs",
-      "Learning and improvement over time"
-    ],
-    process: [
-      {
-        phase: "Model Research",
-        description: "Evaluated different NLP models and selected the most suitable for conversational AI."
-      },
-      {
-        phase: "Training Data Preparation",
-        description: "Curated and preprocessed large datasets for training the conversation model."
-      },
-      {
-        phase: "Model Training",
-        description: "Trained custom models for intent recognition, entity extraction, and response generation."
-      },
-      {
-        phase: "Integration & Testing",
-        description: "Integrated with web interface and conducted extensive testing with real conversations."
-      }
-    ],
-    challenges: [
-      {
-        challenge: "Context Management",
-        solution: "Implemented sophisticated conversation memory and context tracking mechanisms."
-      },
-      {
-        challenge: "Response Quality",
-        solution: "Used ensemble methods and human-in-the-loop validation for better response quality."
-      },
-      {
-        challenge: "Scalability",
-        solution: "Built microservices architecture with load balancing for handling multiple conversations."
-      }
-    ],
-    outcome: {
-      metrics: "95% intent recognition accuracy, 3.2M+ conversations handled",
-      impact: "Reduced customer support tickets by 60% and improved customer satisfaction by 40%"
-    },
-    links: {
-      github: "https://github.com/yourusername/ai-chat-assistant",
-      demo: "https://ai-chat-demo.vercel.app",
-      caseStudy: "/case-studies/ai-chat-assistant.pdf"
+      github: "https://github.com/yourusername/othello-game",
+      demo: "https://othello-game-demo.vercel.app",
+      caseStudy: "/case-studies/othello-game.pdf"
     }
   }
 ];
@@ -412,7 +364,10 @@ function ProjectsContent() {
     'HTML': '/html.png',
     'CSS': '/css.png',
     'Next.js': '/next.png',
-    'Tailwind CSS': '/tailwind.png'
+    'Tailwind CSS': '/tailwind.png',
+    'AWS Bedrock': '/aws.png',
+    'Jira API': '/jira.png',
+    'AWS Titan': '/aws.png',
   };
 
   useEffect(() => {
@@ -476,7 +431,7 @@ function ProjectsContent() {
                   <div className={styles.metaItem}>
                     <Eye className={styles.metaIcon} />
                     <span>{selectedProject.views}</span>
-            </div>
+                  </div>
                   <div className={styles.metaItem}>
                     <Calendar className={styles.metaIcon} />
                     <span>{selectedProject.date}</span>
@@ -708,7 +663,7 @@ function ProjectsContent() {
                     >
                       <Download className={styles.linkIcon} />
                       Case Study
-              </Link>
+                    </Link>
                   </div>
                 </section>
               </div>

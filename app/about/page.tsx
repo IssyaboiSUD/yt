@@ -26,48 +26,58 @@ export default function AboutPage() {
   const experience = [
     {
       id: 1,
-      title: "IT Specialist",
-      company: "Randstad Digital Germany AG",
-      location: "Munich, Germany",
-      duration: "July 2023 - Present",
-      description: "Network Monitoring, Hardware maintenance, Software configuration and support, IT Operations, ",
-      achievements: [
-        "Monitored servers and network infrastructure using Zabbix, promptly resolving issues to ensure system stability.",
-        "Managed employee accounts and access rights, enabling seamless onboarding and softwareprovisioning",
-        "Regularly used Microsoft Intune, Entra, Azure, Google Admin Console, Jira, Confluence, and CMDB to support IT operations and documentation"
-      ]
-    },
-    
+      companyLogo: "/randstad-logo.png",
+      companyName: "Randstad Digital Germany",
+      jobTitle: "IT Services and Operations",
+      employmentType: "Work Study",
+      dates: "Jul 2023 - Present",
+      duration: "2 yrs 2 mos",
+      location: "München, Bayern, Deutschland"
+    }
   ];
 
   const education = [
     {
       id: 1,
-      degree: "B.Sc. Bioinformatics",
-      school: "Ludwig-Maximilians-Universität München, Technische Universität München",
-      location: "Munich, Germany",
-      duration: "2021 - 2025",
+      institutionLogo: "/lmu-logo.png",
+      institutionName: "Ludwig-Maximilians-Universität München",
+      degree: "Bachelor, Bioinformatik",
+      dates: "2020 - 2023"
     }
   ];
 
-  const languages = [
-    { name: "English", level: "Native", proficiency: 5 },
-    { name: "German", level: "Fluent", proficiency: 5 },
-    { name: "Nepali", level: "Native", proficiency: 5 },
-    { name: "Spanish", level: "Conversational", proficiency: 3 },
-    { name: "Italian", level: "Conversational", proficiency: 3 },
+  const certifications = [
+    {
+      id: 1,
+      logo: "/scrum-logo.png",
+      name: "Professional Scrum Product Owner I",
+      organization: "Scrum.org",
+      issueDate: "Issued Nov 2024",
+      credentialUrl: "https://www.credly.com/badges/5ad50002-8e98-476f-9563-8b45d91415ba/linked_in?t=snpz3z"
+    }
   ];
 
   const skills = [
-    { name: "JavaScript", level: 5 },
-    { name: "React", level: 5 },
-    { name: "Next JS", level: 4 },
-    { name: "TypeScript", level: 4 },
-    { name: "Python", level: 4 },
-    { name: "Java", level: 5 },
-    { name: "R", level: 3 },
-    { name: "MySQL", level: 4 },
-    { name: "Git", level: 5 }
+    "Confluence",
+    "Jira", 
+    "Zabbix",
+    "MySQL",
+    "Python",
+    "Bioinformatics",
+    "Data Analysis",
+    "Scrum",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript"
+  ];
+
+  const languages = [
+    { name: "Deutsch", proficiency: "Full professional proficiency" },
+    { name: "Englisch", proficiency: "Native or bilingual proficiency" },
+    { name: "Hindi", proficiency: "Native or bilingual proficiency" },
+    { name: "Marathi", proficiency: "Native or bilingual proficiency" },
+    { name: "Sanskrit", proficiency: "Elementary proficiency" }
   ];
 
   return (
@@ -126,7 +136,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Main Content - Stacked Sections */}
+        {/* Main Content - LinkedIn Style Sections */}
         <div className={styles.mainContent}>
           {/* About Section */}
           <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
@@ -142,34 +152,21 @@ export default function AboutPage() {
           {/* Experience Section */}
           <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
             <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Experience</h2>
-            <div className={styles.experienceList}>
-              {experience.map((exp, index) => (
-                <div key={exp.id} className={`${styles.experienceItem} ${isDark ? styles.experienceItemDark : ''}`}>
-                  <div className={styles.experienceHeader}>
-                    <div className={styles.experienceTitle}>
-                      <h3 className={`${isDark ? styles.experienceTitleDark : ''}`}>{exp.title}</h3>
-                      <div className={`${styles.companyInfo} ${isDark ? styles.companyInfoDark : ''}`}>
-                        <Building size={16} />
-                        <span>{exp.company}</span>
-                      </div>
+            <div className={styles.sectionContent}>
+              {experience.map((exp) => (
+                <div key={exp.id} className={styles.experienceItem}>
+                  <div className={styles.companyInfo}>
+                    <div className={styles.companyLogo}>
+                      <img src={exp.companyLogo} alt="Company Logo" className={styles.logoImage} />
                     </div>
-                    <div className={styles.experienceMeta}>
-                      <div className={`${styles.location} ${isDark ? styles.locationDark : ''}`}>
-                        <MapPin size={14} />
-                        <span>{exp.location}</span>
-                      </div>
-                      <div className={`${styles.duration} ${isDark ? styles.durationDark : ''}`}>
-                        <Calendar size={14} />
-                        <span>{exp.duration}</span>
-                      </div>
+                    <div className={styles.companyDetails}>
+                      <h3 className={`${styles.jobTitle} ${isDark ? styles.jobTitleDark : ''}`}>{exp.jobTitle}</h3>
+                      <p className={`${styles.companyName} ${isDark ? styles.companyNameDark : ''}`}>{exp.companyName}</p>
+                      <p className={`${styles.employmentType} ${isDark ? styles.employmentTypeDark : ''}`}>{exp.employmentType}</p>
+                      <p className={`${styles.dates} ${isDark ? styles.datesDark : ''}`}>{exp.dates} · {exp.duration}</p>
+                      <p className={`${styles.location} ${isDark ? styles.locationDark : ''}`}>{exp.location}</p>
                     </div>
                   </div>
-                  <p className={`${styles.experienceDescription} ${isDark ? styles.experienceDescriptionDark : ''}`}>{exp.description}</p>
-                  <ul className={`${styles.achievements} ${isDark ? styles.achievementsDark : ''}`}>
-                    {exp.achievements.map((achievement, index) => (
-                      <li key={index} className={isDark ? styles.achievementItemDark : ''}>{achievement}</li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>
@@ -178,28 +175,43 @@ export default function AboutPage() {
           {/* Education Section */}
           <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
             <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Education</h2>
-            <div className={styles.educationList}>
+            <div className={styles.sectionContent}>
               {education.map((edu) => (
-                <div key={edu.id} className={`${styles.educationItem} ${isDark ? styles.educationItemDark : ''}`}>
-                  <div className={styles.educationHeader}>
-                    <div className={styles.educationTitle}>
-                      <h3 className={`${isDark ? styles.educationTitleDark : ''}`}>{edu.degree}</h3>
-                      <div className={`${styles.schoolInfo} ${isDark ? styles.schoolInfoDark : ''}`}>
-                        <GraduationCap size={16} />
-                        <span>{edu.school}</span>
-                      </div>
+                <div key={edu.id} className={styles.educationItem}>
+                  <div className={styles.institutionInfo}>
+                    <div className={styles.institutionLogo}>
+                      <img src={edu.institutionLogo} alt="Institution Logo" className={styles.logoImage} />
                     </div>
-                    <div className={styles.educationMeta}>
-                      <div className={`${styles.location} ${isDark ? styles.locationDark : ''}`}>
-                        <MapPin size={14} />
-                        <span>{edu.location}</span>
-                      </div>
-                      <div className={`${styles.duration} ${isDark ? styles.durationDark : ''}`}>
-                        <Calendar size={14} />
-                        <span>{edu.duration}</span>
-                      </div> 
+                    <div className={styles.institutionDetails}>
+                      <h3 className={`${styles.institutionName} ${isDark ? styles.institutionNameDark : ''}`}>{edu.institutionName}</h3>
+                      <p className={`${styles.degree} ${isDark ? styles.degreeDark : ''}`}>{edu.degree}</p>
+                      <p className={`${styles.dates} ${isDark ? styles.datesDark : ''}`}>{edu.dates}</p>
                     </div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Certifications Section */}
+          <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
+            <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Licenses & certifications</h2>
+            <div className={styles.sectionContent}>
+              {certifications.map((cert) => (
+                <div key={cert.id} className={styles.certificationItem}>
+                  <div className={styles.certificationInfo}>
+                    <div className={styles.certificationLogo}>
+                      <img src={cert.logo} alt="Certification Logo" className={styles.logoImage} />
+                    </div>
+                    <div className={styles.certificationDetails}>
+                      <h3 className={`${styles.certificationName} ${isDark ? styles.certificationNameDark : ''}`}>{cert.name}</h3>
+                      <p className={`${styles.organization} ${isDark ? styles.organizationDark : ''}`}>{cert.organization}</p>
+                      <p className={`${styles.issueDate} ${isDark ? styles.issueDateDark : ''}`}>{cert.issueDate}</p>
+                    </div>
+                  </div>
+                  <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className={styles.credentialButton}>
+                    Show credential ↗
+                  </a>
                 </div>
               ))}
             </div>
@@ -210,23 +222,8 @@ export default function AboutPage() {
             <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Skills</h2>
             <div className={styles.skillsGrid}>
               {skills.map((skill, index) => (
-                <div key={index} className={`${styles.skillItem} ${isDark ? styles.skillItemDark : ''}`}>
-                  <div className={styles.skillInfo}>
-                    <span className={`${styles.skillName} ${isDark ? styles.skillNameDark : ''}`}>{skill.name}</span>
-                    <span className={`${styles.skillLevel} ${isDark ? styles.skillLevelDark : ''}`}>
-                      {skill.level === 5 ? 'Expert' : 
-                       skill.level === 4 ? 'Advanced' : 
-                       skill.level === 3 ? 'Intermediate' : 'Beginner'}
-                    </span>
-                  </div>
-                  <div className={styles.proficiencyBars}>
-                    {[...Array(5)].map((_, i) => (
-                      <div 
-                        key={i} 
-                        className={`${styles.proficiencyBar} ${i < skill.level ? styles.filled : ''} ${isDark ? styles.proficiencyBarDark : ''}`}
-                      />
-                    ))}
-                  </div>
+                <div key={index} className={styles.skillItem}>
+                  <div className={`${styles.skillName} ${isDark ? styles.skillNameDark : ''}`}>{skill}</div>
                 </div>
               ))}
             </div>
@@ -235,21 +232,11 @@ export default function AboutPage() {
           {/* Languages Section */}
           <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
             <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Languages</h2>
-            <div className={styles.languagesList}>
-              {languages.map((lang, index) => (
-                <div key={index} className={`${styles.languageItem} ${isDark ? styles.languageItemDark : ''}`}>
-                  <div className={styles.languageInfo}>
-                    <span className={`${styles.languageName} ${isDark ? styles.languageNameDark : ''}`}>{lang.name}</span>
-                    <span className={`${styles.languageLevel} ${isDark ? styles.languageLevelDark : ''}`}>{lang.level}</span>
-                  </div>
-                  <div className={styles.proficiencyBars}>
-                    {[...Array(5)].map((_, i) => (
-                      <div 
-                        key={i} 
-                        className={`${styles.proficiencyBar} ${i < lang.proficiency ? styles.filled : ''} ${isDark ? styles.proficiencyBarDark : ''}`}
-                      />
-                    ))}
-                  </div>
+            <div className={styles.sectionContent}>
+              {languages.map((language, index) => (
+                <div key={index} className={styles.languageItem}>
+                  <div className={`${styles.languageName} ${isDark ? styles.languageNameDark : ''}`}>{language.name}</div>
+                  <div className={`${styles.languageProficiency} ${isDark ? styles.languageProficiencyDark : ''}`}>{language.proficiency}</div>
                 </div>
               ))}
             </div>

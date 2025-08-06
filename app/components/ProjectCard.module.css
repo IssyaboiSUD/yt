@@ -12,7 +12,7 @@
 .thumbnailContainer {
   position: relative;
   width: 100%;
-  height: 180px;
+  aspect-ratio: 16/9;
   border-radius: 12px;
   overflow: hidden;
   background: var(--yt-light-gray);
@@ -133,6 +133,6 @@
   }
   
   .thumbnailContainer {
-    height: 200px;
+    aspect-ratio: 16/9;
   }
 } 

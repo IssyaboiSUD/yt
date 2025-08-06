@@ -1,27 +1,45 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ProjectCard from './components/ProjectCard';
 import styles from './page.module.css';
+import { useTheme } from './contexts/ThemeContext';
 
 export default function Home() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [heroText, setHeroText] = useState(0);
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
+  const heroMessages = [
+    "Hello",
+    "I am Sudarshan",
+    "Welcome to my website"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroText((prev) => (prev + 1) % heroMessages.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React and Node.js",
+      title: "AI Based Talent Matching System ",
+      description: "Semantic AI-powered employee matching for project staffing",
       thumbnail: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=320&h=180&fit=crop",
       views: "1.2K views",
       date: "2 weeks ago"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates",
+      title: "Next.js To-Do App",
+      description: "Simple and modern task management built with React and Next.js",
       thumbnail: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=320&h=180&fit=crop",
       views: "856 views",
       date: "1 month ago"
@@ -69,6 +87,14 @@ export default function Home() {
       <div className={styles.main}>
         <Sidebar collapsed={sidebarCollapsed} />
         <div className={`${styles.content} ${sidebarCollapsed ? styles.sidebarCollapsed : ''}`}>
+          {/* Hero Section */}
+          <div className={`${styles.heroSection} ${isDark ? styles.heroSectionDark : ''}`}>
+            <div className={styles.heroText}>
+              <span className={styles.heroMessage}>{heroMessages[heroText]}</span>
+            </div>
+          </div>
+
+          {/* Projects Grid */}
           <div className={styles.projectsGrid}>
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />

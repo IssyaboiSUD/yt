@@ -90,7 +90,7 @@ export default function ContactPage() {
                   onChange={handleInputChange}
                   required
                   className={`${styles.input} ${isDark ? styles.inputDark : ''}`}
-                  placeholder="your.email@example.com"
+                  placeholder="yourmail@example.com"
                 />
               </div>
 
@@ -146,10 +146,10 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <a 
-                    href="mailto:hello@example.com" 
+                    href="mailto:sdrshndahal@gmail.com" 
                     className={`${styles.contactLink} ${isDark ? styles.contactLinkDark : ''}`}
                   >
-                    hello@example.com
+                    sdrshndahal@gmail.com
                   </a>
                 </div>
               </div>
@@ -163,12 +163,12 @@ export default function ContactPage() {
                     GitHub
                   </h3>
                   <a 
-                    href="https://github.com/yourusername" 
+                    href="https://github.com/IssyaboiSUD" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={`${styles.contactLink} ${isDark ? styles.contactLinkDark : ''}`}
                   >
-                    github.com/yourusername
+                    github.com/IssyaboiSUD
                   </a>
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className={`${styles.contactLink} ${isDark ? styles.contactLinkDark : ''}`}
                   >
-                    linkedin.com/in/yourusername
+                    linkedin.com/in/Sudarshan
                   </a>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                     Location
                   </h3>
                   <p className={`${styles.contactText} ${isDark ? styles.contactTextDark : ''}`}>
-                    San Francisco, CA
+                    Munich, Germany
                   </p>
                 </div>
               </div>
