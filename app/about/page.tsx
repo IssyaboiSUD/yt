@@ -75,9 +75,11 @@ export default function AboutPage() {
   const languages = [
     { name: "Deutsch", proficiency: "Full professional proficiency" },
     { name: "Englisch", proficiency: "Native or bilingual proficiency" },
-    { name: "Hindi", proficiency: "Native or bilingual proficiency" },
-    { name: "Marathi", proficiency: "Native or bilingual proficiency" },
-    { name: "Sanskrit", proficiency: "Elementary proficiency" }
+    { name: "Nepali", proficiency: "Native or bilingual proficiency" },
+    { name: "Italian", proficiency: "Elementary proficiency" },
+    { name: "English", proficiency: "Native or bilingual proficiency" },
+    { name: "Spanish", proficiency: "Conversational" },
+    
   ];
 
   return (

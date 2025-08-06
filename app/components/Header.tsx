@@ -153,15 +153,15 @@ export default function Header({ sidebarCollapsed, onToggleSidebar }: HeaderProp
           
           {showSocialMenu && (
             <div className={styles.socialMenu}>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <a href="https://github.com/IssyaboiSUD" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <img src="/github.png" alt="GitHub" width={20} height={20} className={styles.iconImg} />
                 <span>GitHub</span>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <a href="https://instagram.com/sudarschan/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <img src="/instagram.png" alt="Instagram" width={20} height={20} className={styles.iconImg} />
                 <span>Instagram</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              <a href="https://www.linkedin.com/in/sudarshan-dahal-a5738823a/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <img src="/linkedin.png" alt="LinkedIn" width={20} height={20} className={styles.iconImg} />
                 <span>LinkedIn</span>
               </a>
