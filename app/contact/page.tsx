@@ -182,7 +182,7 @@ export default function ContactPage() {
                     LinkedIn
                   </h3>
                   <a 
-                    href="https://linkedin.com/in/yourusername" 
+                    href="https://www.linkedin.com/in/sudarshan-dahal-a5738823a/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={`${styles.contactLink} ${isDark ? styles.contactLinkDark : ''}`}

@@ -10,10 +10,94 @@ import { useTheme } from '../contexts/ThemeContext';
 
 const projects = [
   {
-    id: 1,
+    id: "1",
+    title: "Bayreuth Apartments – Vacation Rental Booking Website",
+    tagline: "Full-stack booking platform for vacation rentals with real payments, automated emails, and responsive UI.",
+    heroImage: "/bt.png",
+    thumbnail: "/bt-t.png",
+    views: "10K views",
+    date: "2025",
+    overview: {
+      what: "A complete vacation rental booking platform for two apartments in Bayreuth, Germany. Guests can browse properties, check availability, book dates, and pay securely. Hosts receive automated booking notifications and can manage reservations via an admin panel.",
+      why: "To provide a professional, automated booking system that replaces manual reservation processes while giving guests a smooth, Booking.com-style user experience.",
+      role: "Full-stack developer responsible for system architecture, UI/UX design, backend development, payment integration, email automation, and deployment."
+    },
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Stripe Checkout",
+      "Nodemailer",
+      "Vercel"
+    ],
+    features: [
+      "Mobile-first responsive design with modern UI/UX",
+      "Interactive photo gallery with modal viewer",
+      "Real-time price calculation based on dates and guests",
+      "Modern date picker with availability checks",
+      "Detailed booking summary with cost breakdown",
+      "Secure Stripe payment processing with webhook handling",
+      "Automated booking confirmation emails for guests",
+      "Host notifications for new bookings",
+      "Admin features for managing properties and reservations",
+      "Error handling with user-friendly fallback messages"
+    ],
+    process: [
+      {
+        phase: "Planning & Requirements",
+        description: "Defined business requirements with the apartment owners, identified essential booking flow, and determined the need for real-time availability and automated payments."
+      },
+      {
+        phase: "UI/UX Design",
+        description: "Created a clean, modern interface inspired by Booking.com, focusing on mobile-first usability and intuitive navigation."
+      },
+      {
+        phase: "Backend Development",
+        description: "Implemented Prisma-based database models for users, bookings, apartments, and payments. Built API endpoints for booking management and integrated Stripe for secure transactions."
+      },
+      {
+        phase: "Email Automation",
+        description: "Configured Nodemailer with SMTP to send branded confirmation emails to guests and alert hosts on new reservations."
+      },
+      {
+        phase: "Testing & Deployment",
+        description: "Tested full booking and payment flow using Stripe test cards, handled webhook edge cases, and deployed to Vercel with secure environment variables."
+      }
+    ],
+    challenges: [
+      {
+        challenge: "Ensuring accurate real-time availability checks during the booking process.",
+        solution: "Implemented server-side validation on date selection and blocked overlapping bookings at the database level."
+      },
+      {
+        challenge: "Maintaining a professional, fast-loading interface with many high-resolution property images.",
+        solution: "Used Next.js Image Optimization and responsive loading strategies to deliver high-quality visuals without performance issues."
+      },
+      {
+        challenge: "Handling secure payment confirmation before finalizing bookings.",
+        solution: "Integrated Stripe webhooks to update booking status only after successful payment."
+      }
+    ],
+    outcome: {
+      metrics: 
+        "8 fully responsive pages, 100% mobile-optimized design, Automated booking and payment flow, Zero manual admin work required",
+      impact: "Delivered a production-ready booking platform that can be commercially deployed. Reduced booking management time for hosts to near zero while providing guests with a professional and trustworthy online booking experience."
+    },
+    links: {
+      github: "https://github.com/IssyaboiSUD/bt",
+      demo: "https://bt-lac.vercel.app/",
+      caseStudy: "/case-studies/bayreuth-apartments"
+    }
+  },
+  
+  {
+    id: 2,
     title: "AI-Based Talent Matching System",
     tagline: "Semantic AI-powered employee matching for project staffing",
-    heroImage: "/hiring.jpg", 
+    heroImage: "/ai-hero.png", 
     thumbnail: "/ai.png",
     views: "3.2K views",
     date: "2 months ago",
@@ -81,17 +165,17 @@ const projects = [
       impact: "Helped streamline internal staffing workflows and improved project-team fit across departments"
     },
     links: {
-      github: "https://github.com/yourusername/ai-chat-assistant",  
-      demo: "https://ai-chat-demo.vercel.app",
+      github: "https://github.com/IssyaboiSUD/skillmatch",  
+      demo: "https://skillmatch-xi.vercel.app/",
       caseStudy: "/case-studies/ai-chat-assistant.pdf"
     }
   },
   {
-    id: 2,
+    id: 3,
     title: "Next.js To-Do App",
     tagline: "Simple and modern task management built with React and Next.js",
-    heroImage: "/todo-hero.jpg",
-    thumbnail: "/todo-thumb.png",
+    heroImage: "/todo.png",
+    thumbnail: "/focus.png",
     views: "1.1K views",
     date: "2 weeks ago",
     overview: {
@@ -109,7 +193,8 @@ const projects = [
       ],
     features: [
       "Add new tasks with real-time input",
-      "Mark tasks as completed or delete them",
+      "Mark tasks as open, in progress or completed",
+      "Kanban board style to visualize and manage tasks",
       "Responsive and clean user interface",
       "Client-side state management for smooth UX",
       "Optimized for fast loading and deployment on Vercel",
@@ -152,13 +237,13 @@ const projects = [
       impact: "Adopted by 50+ teams with 95% user satisfaction rating"
     },
     links: {
-      github: "https://github.com/yourusername/task-management-app",
-      demo: "https://task-management-demo.vercel.app",
+      github: "https://github.com/IssyaboiSUD/todo",
+      demo: "https://todo-green-rho-57.vercel.app/",
       caseStudy: "/case-studies/task-management-app.pdf"
     }
   },
   {
-    id: 3,
+    id: 4,
     title: "Weather Dashboard",
     tagline: "Real-time weather dashboard with interactive maps and forecasts",
     heroImage: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=1200&h=600&fit=crop",
@@ -222,7 +307,7 @@ const projects = [
     }
   },
   {
-    id: 4,
+    id: 5,
     title: "Social Media Analytics",
     tagline: "Analytics platform for social media performance tracking",
     heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop",
@@ -286,10 +371,10 @@ const projects = [
     }
   },
   {
-    id: 5,
+    id: 6,
     title: "Othello Game with AI Opponent",
     tagline: "Java-based Reversi game with AI strategy and graphical interface",
-    heroImage: "/othello.jpg",
+    heroImage: "/othello.png",
     thumbnail: "/oth.png",
     views: "1.9K views",
     date: "6 months ago",

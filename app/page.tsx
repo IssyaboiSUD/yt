@@ -16,7 +16,7 @@ export default function Home() {
   const heroMessages = [
     "Hello",
     "I am Sudarshan",
-    "Welcome to my website"
+    "Let's build something together"
   ];
 
   useEffect(() => {
@@ -29,34 +29,34 @@ export default function Home() {
 
   const projects = [
     {
-      id: 1,
+      id: 2,
       title: "AI Based Talent Matching System ",
       description: "Semantic AI-powered employee matching for project staffing",
-      thumbnail: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=320&h=180&fit=crop",
+      thumbnail: "/ai.png",
       views: "1.2K views",
       date: "2 weeks ago"
     },
     {
-      id: 2,
+      id: 3,
       title: "Next.js To-Do App",
       description: "Simple and modern task management built with React and Next.js",
-      thumbnail: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=320&h=180&fit=crop",
-      views: "856 views",
+      views: "1.2M views",
+      thumbnail: "/focus.png",
       date: "1 month ago"
     },
     {
-      id: 3,
-      title: "Weather Dashboard",
-      description: "Real-time weather dashboard with interactive maps and forecasts",
-      thumbnail: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=320&h=180&fit=crop",
+      id: 1,
+      title: "Vacation Rental Booking Website",
+      description: "Full-stack booking platform for vacation rentals with real payments, automated emails, and responsive UI",
+      thumbnail: "bt.png",
       views: "2.1K views",
       date: "3 weeks ago"
     },
     {
-      id: 4,
-      title: "Social Media Analytics",
-      description: "Analytics platform for social media performance tracking",
-      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=180&fit=crop",
+      id: 6,
+      title: "Othello Game with AI Opponent",
+      description: "Java-based Reversi game with AI strategy and graphical interface",
+      thumbnail: "othello.png",
       views: "1.5K views",
       date: "1 week ago"
     },
@@ -69,7 +69,7 @@ export default function Home() {
       date: "2 months ago"
     },
     {
-      id: 6,
+      id: 4,
       title: "AI Chat Assistant",
       description: "Intelligent chatbot powered by machine learning algorithms",
       thumbnail: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=320&h=180&fit=crop",
