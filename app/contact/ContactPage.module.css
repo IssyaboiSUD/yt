@@ -1,19 +1,88 @@
+/* Navigation */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--yt-border);
+  transition: all 0.3s ease;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.navLogo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1DB954;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLogo:hover {
+  color: #1ed760;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navLink {
+  color: var(--yt-gray);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--foreground);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1DB954;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
 /* Main Container */
 .container {
   min-height: 100vh;
-  background: #ffffff;
-  padding-top: 20px; /* Add top padding to account for header */
+  background: var(--background);
+  padding-top: 0; /* Remove top padding since navigation is fixed */
 }
 
 .containerDark {
-  background: #000000;
+  background: var(--background);
 }
 
 /* Content Layout */
 .content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 150px 40px 120px 40px; /* Increased top padding from 60px to 160px */
+  padding: 120px 40px 120px 40px; /* Reduced top padding to account for navigation */
 }
 
 /* Header Section */
@@ -49,10 +118,11 @@
 
 /* Main Section */
 .mainSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 200px;
 }
 
 /* Form Section */
@@ -66,6 +136,7 @@
   color: #1d1d1f;
   margin-bottom: 40px;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 .sectionTitleDark {
@@ -77,6 +148,31 @@
   flex-direction: column;
   gap: 32px;
 }
+
+.formNote {
+  color: #b3b3b3;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 16px;
+  background: rgba(29, 185, 84, 0.1);
+  border: 1px solid rgba(29, 185, 84, 0.2);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.directEmailLink {
+  color: #1DB954;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.directEmailLink:hover {
+  color: #1ed760;
+  text-decoration: underline;
+}
+
+
 
 .formGroup {
   display: flex;
@@ -211,7 +307,8 @@
 
 /* Contact Information */
 .infoSection {
-  /* Info section styles */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contactInfo {
@@ -285,13 +382,13 @@
 .contactTitle {
   font-size: 18px;
   font-weight: 600;
-  color: #1d1d1f;
+  color: var(--foreground);
   margin-bottom: 8px;
   letter-spacing: -0.01em;
 }
 
 .contactTitleDark {
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 .contactLink,
@@ -394,11 +491,6 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .mainSection {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-  
   .content {
     padding: 40px 32px 120px 32px;
   }
@@ -413,12 +505,21 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding-top: 10px;
+  .navContainer {
+    padding: 0 20px;
+    height: 70px;
   }
   
   .content {
-    padding: 30px 24px 80px 24px;
+    padding: 100px 24px 80px 24px; /* Adjusted for navigation */
+  }
+  
+  .navLinks {
+    gap: 20px;
+  }
+  
+  .container {
+    padding-top: 10px;
   }
   
   .header {
@@ -461,12 +562,20 @@
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding-top: 5px;
+  .navContainer {
+    padding: 0 16px;
+  }
+  
+  .navLinks {
+    gap: 16px;
   }
   
   .content {
-    padding: 20px 20px 60px 20px;
+    padding: 90px 20px 60px 20px; /* Adjusted for navigation */
+  }
+  
+  .container {
+    padding-top: 5px;
   }
   
   .title {

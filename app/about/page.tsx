@@ -1,249 +1,279 @@
 'use client';
 
-import { useState } from 'react';
-import { 
-  Mail,
-  Linkedin,
-  MapPin, 
-  Calendar, 
-  Building, 
-  GraduationCap, 
-  Star,
-  Phone,
-  ExternalLink,
-  Plus,
-  MessageCircle,
-  Globe
-} from 'lucide-react';
-import PageLayout from '../components/PageLayout';
+import Link from 'next/link';
 import styles from './AboutPage.module.css';
-import { useTheme } from '../contexts/ThemeContext';
 
 export default function AboutPage() {
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
-
-  const experience = [
-    {
-      id: 1,
-      companyLogo: "/randstad-logo.png",
-      companyName: "Randstad Digital Germany",
-      jobTitle: "IT Services and Operations",
-      employmentType: "Work Study",
-      dates: "Jul 2023 - Present",
-      duration: "2 yrs 2 mos",
-      location: "München, Bayern, Deutschland"
-    }
-  ];
-
-  const education = [
-    {
-      id: 1,
-      institutionLogo: "/lmu-logo.png",
-      institutionName: "Ludwig-Maximilians-Universität München",
-      degree: "Bachelor, Bioinformatik",
-      dates: "2020 - 2023"
-    }
-  ];
-
-  const certifications = [
-    {
-      id: 1,
-      logo: "/scrum-logo.png",
-      name: "Professional Scrum Product Owner I",
-      organization: "Scrum.org",
-      issueDate: "Issued Nov 2024",
-      credentialUrl: "https://www.credly.com/badges/5ad50002-8e98-476f-9563-8b45d91415ba/linked_in?t=snpz3z"
-    }
-  ];
-
-  const skills = [
-    "Confluence",
-    "Jira", 
-    "Zabbix",
-    "MySQL",
-    "Python",
-    "Bioinformatics",
-    "Data Analysis",
-    "Scrum",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript"
-  ];
-
-  const languages = [
-    { name: "Deutsch", proficiency: "Full professional proficiency" },
-    { name: "English", proficiency: "Native or bilingual proficiency" },
-    { name: "Nepali", proficiency: "Native or bilingual proficiency" },
-    { name: "Italian", proficiency: "Elementary proficiency" },
-    { name: "Spanish", proficiency: "Conversational" },
-    
-  ];
-
   return (
-    <PageLayout>
-      <div className={`${styles.container} ${isDark ? styles.containerDark : ''}`}>
-        {/* Header Section */}
-        <div className={`${styles.header} ${isDark ? styles.headerDark : ''}`}>
-          <div className={styles.coverPhoto}>
-            <div className={styles.profileImage}>
-              <img 
-                src="/profile.jpeg" 
-                alt="Sudarshan Profile"
-              />
-            </div>
-          </div>
+    <div className={styles.container}>
+
+
+      <div className={styles.main}>
+        <div className={styles.content}>
           
-          <div className={styles.profileInfo}>
-            <h1 className={`${styles.name} ${isDark ? styles.nameDark : ''}`}>Sudarshan Dahal</h1>
-            <p className={`${styles.title} ${isDark ? styles.titleDark : ''}`}>Software Engineer</p>
-          
-            
-            <div className={`${styles.locationInfo} ${isDark ? styles.locationInfoDark : ''}`}>
-              <MapPin size={16} />
-              <span>Munich, Germany</span>
-              <span className={`${styles.separator} ${isDark ? styles.separatorDark : ''}`}>•</span>
-              <span>500+ connections</span>
-            </div>
-
-            <div className={styles.contactInfo}>
-              <a href="mailto:suddahal99@gmail.com" className={`${styles.contactLink} ${isDark ? styles.contactLinkDark : ''}`}>
-                <Mail size={16} />
-                <span>sudarshan.dahal@web.de</span>
-              </a>
-              <a href="tel:+491776760689" className={`${styles.contactLink} ${isDark ? styles.contactLinkDark : ''}`}>
-                <Phone size={16} />
-                <span>+49 177 6760689</span>
-              </a>
-            </div>
-
-            <div className={styles.actionButtons}>
-              <a 
-                href="https://www.linkedin.com/in/sudarshan-dahal-a5738823a/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className={styles.connectButton}
-              >
-                <Linkedin size={16} />
-                <span>Connect on LinkedIn</span>
-                <ExternalLink size={14} />
-              </a>
-              <button className={`${styles.messageButton} ${isDark ? styles.messageButtonDark : ''}`}>
-                <MessageCircle size={16} />
-                <span>Message</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Content - LinkedIn Style Sections */}
-        <div className={styles.mainContent}>
-          {/* About Section */}
-          <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
-            <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>About</h2>
-            <p className={`${styles.aboutText} ${isDark ? styles.aboutTextDark : ''}`}>
-              Passionate software engineer with expertise in full-stack development, 
-              specializing in React, Node.js, and cloud technologies. Committed to 
-              creating scalable, user-friendly applications that solve real-world problems. 
-              Always eager to learn new technologies and contribute to innovative projects.
-            </p>
-          </div>
-
-          {/* Experience Section */}
-          <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
-            <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Experience</h2>
-            <div className={styles.sectionContent}>
-              {experience.map((exp) => (
-                <div key={exp.id} className={styles.experienceItem}>
-                  <div className={styles.companyInfo}>
-                    <div className={styles.companyLogo}>
-                      <img src={exp.companyLogo} alt="Company Logo" className={styles.logoImage} />
+          {/* Hero Section */}
+          <section className={styles.hero}>
+            <div className={styles.heroContent}>
+              <div className={styles.heroLeft}>
+                <h1 className={styles.heroTitle}>SOFTWARE ENGINEER</h1>
+                <p className={styles.heroDescription}>
+                  Passionate about creating intuitive and engaging user experiences. 
+                  Specialize in transforming ideas into beautifully crafted products.
+                </p>
+                <div className={styles.heroStats}>
+                  <div className={styles.statCard}>
+                    <div className={styles.statNumber}>+2</div>
+                    <div className={styles.statLabel}>YEARS OF<br />EXPERIENCE</div>
+                  </div>
+                  <div className={styles.statCard}>
+                    <div className={styles.statNumber}>+4</div>
+                    <div className={styles.statLabel}>PROJECTS<br />COMPLETED</div>
+                  </div>
+                  <div className={styles.statCard}>
+                    <div className={styles.statNumber}>1</div>
+                    <div className={styles.statLabel}>AWARD<br />RECEIVED</div>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.heroRight}>
+                <div className={styles.profileCard}>
+                  <div className={styles.profileImage}>
+                    <img src="/profile.jpeg" alt="Sudarshan Dahal" />
+                  </div>
+                  <div className={styles.profileInfo}>
+                    <h2 className={styles.profileName}>Sudarshan Dahal</h2>
+                    <p className={styles.profileDescription}>
+                      Learn and evolve, build and grow.
+                    </p>
+                    <div className={styles.socialLinks}>
+                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        <img src="/github.png" alt="GitHub" />
+                      </a>
+                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        <img src="/linkedin.png" alt="LinkedIn" />
+                      </a>
+                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        <img src="/instagram.png" alt="Instagram" />
+                      </a>
                     </div>
-                    <div className={styles.companyDetails}>
-                      <h3 className={`${styles.jobTitle} ${isDark ? styles.jobTitleDark : ''}`}>{exp.jobTitle}</h3>
-                      <p className={`${styles.companyName} ${isDark ? styles.companyNameDark : ''}`}>{exp.companyName}</p>
-                      <p className={`${styles.employmentType} ${isDark ? styles.employmentTypeDark : ''}`}>{exp.employmentType}</p>
-                      <p className={`${styles.dates} ${isDark ? styles.datesDark : ''}`}>{exp.dates} · {exp.duration}</p>
-                      <p className={`${styles.location} ${isDark ? styles.locationDark : ''}`}>{exp.location}</p>
+                    <div className={styles.downloadSection}>
+                      <a href="/resume.pdf" download className={styles.downloadBtn}>
+                        Download CV
+                      </a>
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          </section>
 
-          {/* Education Section */}
-          <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
-            <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Education</h2>
-            <div className={styles.sectionContent}>
-              {education.map((edu) => (
-                <div key={edu.id} className={styles.educationItem}>
-                  <div className={styles.institutionInfo}>
-                    <div className={styles.institutionLogo}>
-                      <img src={edu.institutionLogo} alt="Institution Logo" className={styles.logoImage} />
-                    </div>
-                    <div className={styles.institutionDetails}>
-                      <h3 className={`${styles.institutionName} ${isDark ? styles.institutionNameDark : ''}`}>{edu.institutionName}</h3>
-                      <p className={`${styles.degree} ${isDark ? styles.degreeDark : ''}`}>{edu.degree}</p>
-                      <p className={`${styles.dates} ${isDark ? styles.datesDark : ''}`}>{edu.dates}</p>
-                    </div>
+          {/* Education */}
+          <section className={styles.educationSection}>
+            <h2 className={styles.sectionTitle}>EDUCATION &<br />ACADEMIC</h2>
+            <div className={styles.educationList}>
+              <div className={styles.educationItem}>
+                <div className={styles.educationHeader}>
+                  <div className={styles.educationLogo}>
+                    <img src="/lmu-logo.png" alt="LMU Munich" />
+                  </div>
+                  <div className={styles.educationDetails}>
+                    <h3>B.Sc. Bioinformatics</h3>
+                    <span className={styles.institution}>LMU Munich</span>
+                    <span className={styles.period}>2021 - 2025</span>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Certifications Section */}
-          <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
-            <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Licenses & certifications</h2>
-            <div className={styles.sectionContent}>
-              {certifications.map((cert) => (
-                <div key={cert.id} className={styles.certificationItem}>
-                  <div className={styles.certificationInfo}>
-                    <div className={styles.certificationLogo}>
-                      <img src={cert.logo} alt="Certification Logo" className={styles.logoImage} />
-                    </div>
-                    <div className={styles.certificationDetails}>
-                      <h3 className={`${styles.certificationName} ${isDark ? styles.certificationNameDark : ''}`}>{cert.name}</h3>
-                      <p className={`${styles.organization} ${isDark ? styles.organizationDark : ''}`}>{cert.organization}</p>
-                      <p className={`${styles.issueDate} ${isDark ? styles.issueDateDark : ''}`}>{cert.issueDate}</p>
-                    </div>
-                  </div>
-                  <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className={styles.credentialButton}>
-                    Show credential ↗
-                  </a>
+                <p>Interdisciplinary program combining biology, computer science, and mathematics to analyze complex biological data and develop computational solutions.</p>
+                <div className={styles.achievements}>
+                  <span>Machine Learning</span>
+                  <span>Statistics</span>
+                  <span>Programming</span>
                 </div>
-              ))}
+              </div>
+              <div className={styles.educationItem}>
+                <div className={styles.educationHeader}>
+                  <div className={styles.educationLogo}>
+                    <img src="/HM.png" alt="Hochschule für angewandte Wissenschaften" />
+                  </div>
+                  <div className={styles.educationDetails}>
+                    <h3>Bachelor of Optometry</h3>
+                    <span className={styles.institution}>Munich University of Applied Sciences</span>
+                    <span className={styles.period}>2018 - 2022</span>
+                  </div>
+                </div>
+                <p>Practice-oriented program covering optometry, vision science, anatomy, physiology, and business aspects, including hands-on training.</p>
+                <div className={styles.achievements}>
+                  <span>Anatomy</span>
+                  <span>Physiology</span>
+                  <span>Diagnostics and Treatment</span>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
 
-          {/* Skills Section */}
-          <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
-            <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Skills</h2>
+          {/* Experience */}
+          <section className={styles.experienceSection}>
+            <h2 className={styles.sectionTitle}>2 YEARS OF<br />EXPERIENCE</h2>
+            <div className={styles.experienceList}>
+              <div className={styles.experienceItem}>
+                <div className={styles.experienceHeader}>
+                  <div className={styles.experienceLogo}>
+                    <img src="/randstad-logo.png" alt="Randstad" />
+                  </div>
+                  <div className={styles.experienceDetails}>
+                    <h3>IT Services and Operations</h3>
+                    <span className={styles.company}>Randstad Digital Germany</span>
+                    <span className={styles.period}>Jul 2023 - Present</span>
+                  </div>
+                </div>
+                <p>Monitored servers and networks, resolved VPN and device issues, configured laptops/accounts, and supported IT operations with Intune, Azure, and Google Admin.</p>
+              </div>
+              <div className={styles.experienceItem}>
+                <div className={styles.experienceHeader}>
+                  <div className={styles.experienceLogo}>
+                    <div className={styles.placeholderLogo}>🎓</div>
+                  </div>
+                  <div className={styles.experienceDetails}>
+                    <h3>Student Developer</h3>
+                    <span className={styles.company}>LMU Munich</span>
+                    <span className={styles.period}>Jun 2022 - Dec 2024</span>
+                  </div>
+                </div>
+                <p>Developed and implemented academic projects, collaborated closely with peers and professors on research initiatives.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Skills */}
+          <section className={styles.skillsSection}>
+            <h2 className={styles.sectionTitle}>SKILLS &<br />TECHNOLOGIES</h2>
             <div className={styles.skillsGrid}>
-              {skills.map((skill, index) => (
-                <div key={index} className={styles.skillItem}>
-                  <div className={`${styles.skillName} ${isDark ? styles.skillNameDark : ''}`}>{skill}</div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/java.png" alt="Java" />
                 </div>
-              ))}
+                <h3>Java</h3>
+                <p>Programming Language</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/python.png" alt="Python" />
+                </div>
+                <h3>Python</h3>
+                <p>Programming Language</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/javascript.png" alt="JavaScript" />
+                </div>
+                <h3>JavaScript</h3>
+                <p>Programming Language</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/typescript.png" alt="TypeScript" />
+                </div>
+                <h3>TypeScript</h3>
+                <p>Programming Language</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/react.png" alt="React" />
+                </div>
+                <h3>React</h3>
+                <p>Frontend Framework</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/next.png" alt="Next.js" />
+                </div>
+                <h3>Next.js</h3>
+                <p>React Framework</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/html.png" alt="HTML" />
+                </div>
+                <h3>HTML</h3>
+                <p>Markup Language</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/css.png" alt="CSS" />
+                </div>
+                <h3>CSS</h3>
+                <p>Styling Language</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/sql.png" alt="SQL" />
+                </div>
+                <h3>SQL</h3>
+                <p>Database Language</p>
+              </div>
+              <div className={styles.skillCard}>
+                <div className={styles.skillIcon}>
+                  <img src="/scrum-logo.png" alt="Scrum" />
+                </div>
+                <h3>Scrum</h3>
+                <p>Agile Methodology</p>
+              </div>
             </div>
-          </div>
+          </section>
 
-          {/* Languages Section */}
-          <div className={`${styles.section} ${isDark ? styles.sectionDark : ''}`}>
-            <h2 className={`${styles.sectionTitle} ${isDark ? styles.sectionTitleDark : ''}`}>Languages</h2>
-            <div className={styles.sectionContent}>
-              {languages.map((language, index) => (
-                <div key={index} className={styles.languageItem}>
-                  <div className={`${styles.languageName} ${isDark ? styles.languageNameDark : ''}`}>{language.name}</div>
-                  <div className={`${styles.languageProficiency} ${isDark ? styles.languageProficiencyDark : ''}`}>{language.proficiency}</div>
+          {/* Languages */}
+          <section className={styles.languagesSection}>
+            <h2 className={styles.sectionTitle}>LANGUAGES &<br />PROFICIENCY</h2>
+            <div className={styles.languagesGrid}>
+              <div className={styles.languageCard}>
+                <div className={styles.languageFlag}>
+                  <img src="/uk.png" alt="English Flag" />
                 </div>
-              ))}
+                <div className={styles.languageInfo}>
+                  <h3>English</h3>
+                  <p>Native or Bilingual</p>
+                </div>
+              </div>
+              <div className={styles.languageCard}>
+                <div className={styles.languageFlag}>
+                  <img src="/nepal.png" alt="Nepali Flag" />
+                </div>
+                <div className={styles.languageInfo}>
+                  <h3>Nepali</h3>
+                  <p>Native or Bilingual</p>
+                </div>
+              </div>
+              <div className={styles.languageCard}>
+                <div className={styles.languageFlag}>
+                  <img src="/germany.png" alt="German Flag" />
+                </div>
+                <div className={styles.languageInfo}>
+                  <h3>German</h3>
+                  <p>Almost Native</p>
+                </div>
+              </div>
+              <div className={styles.languageCard}>
+                <div className={styles.languageFlag}>
+                  <img src="/italy.png" alt="Italian Flag" />
+                </div>
+                <div className={styles.languageInfo}>
+                  <h3>Italian</h3>
+                  <p>Fluent</p>
+                </div>
+              </div>
+              <div className={styles.languageCard}>
+                <div className={styles.languageFlag}>
+                  <img src="/spain.png" alt="Spanish Flag" />
+                </div>
+                <div className={styles.languageInfo}>
+                  <h3>Spanish</h3>
+                  <p>Conversational</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
+
         </div>
       </div>
-    </PageLayout>
+    </div>
   );
 } 

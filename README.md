@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sudarshan's Portfolio
 
-## Getting Started
+A modern, dark-themed portfolio website built with Next.js, featuring a minimalist design inspired by Spotify and modern web applications.
 
-First, run the development server:
+## 🎨 Design Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Dark Theme**: Modern dark color scheme (#121212 background) with green accent (#1DB954)
+- **Minimalist UI**: Clean, professional design with smooth animations
+- **Responsive Design**: Fully responsive across all devices
+- **Interactive Elements**: Hover effects, smooth transitions, and engaging animations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Homepage Sections
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Hero Section
+- Large, impactful introduction with gradient text
+- Professional profile image with glowing effect
+- Call-to-action buttons for portfolio and contact
+- Smooth fade-in animations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Featured Projects
+- Horizontal scrolling carousel of project cards
+- Interactive navigation with previous/next buttons
+- Project cards with hover effects and scaling
+- Technology tags and project categories
+- Direct links to project details
 
-## Learn More
+### Skills & Technologies
+- Grid layout of skill cards
+- Interactive hover effects
+- Technology icons with category labels
+- Smooth animations and transitions
 
-To learn more about Next.js, take a look at the following resources:
+### Contact Section
+- Professional contact information
+- Social media links (GitHub, LinkedIn)
+- Contact form integration
+- Hover effects and smooth interactions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: CSS Modules with custom properties
+- **Icons**: Lucide React
+- **Fonts**: Inter (Google Fonts)
+- **Deployment**: Vercel-ready
 
-## Deploy on Vercel
+## 🎯 Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Smooth Animations**: CSS animations and transitions throughout
+- **Interactive Carousel**: Touch-friendly project showcase
+- **Responsive Grid**: Adaptive layouts for all screen sizes
+- **Dark Theme**: Consistent dark color scheme
+- **Performance**: Optimized images and smooth scrolling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Responsive Design
+
+- **Desktop**: Full-width layout with sidebar navigation
+- **Tablet**: Optimized spacing and touch interactions
+- **Mobile**: Stacked layout with mobile-first design
+- **Touch**: Touch-friendly buttons and interactions
+
+## 🚀 Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
+
+## 🎨 Customization
+
+The design uses CSS custom properties for easy theming:
+- Primary colors and accents
+- Background and surface colors
+- Text colors and typography
+- Border and shadow styles
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
