@@ -310,6 +310,14 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<ProjectsPageSkeleton />}>
+      <ProjectsPageContent />
+    </Suspense>
+  );
+}
+
+function ProjectsPageContent() {
   const searchParams = useSearchParams();
   const selectedId = searchParams.get('selected');
   const [selectedProject, setSelectedProject] = useState(projects[0]);
@@ -734,6 +742,51 @@ export default function ProjectsPage() {
                     )}
                   </div>
                 </section>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Loading skeleton component
+function ProjectsPageSkeleton() {
+  return (
+    <div className={styles.container}>
+      <div className={styles.main}>
+        <div className={styles.content}>
+          <div className={styles.layout}>
+            {/* Sidebar Skeleton */}
+            <aside className={`${styles.projectsSidebar} ${styles.projectsSidebarDark}`}>
+              <div className={`${styles.sidebarHeader} ${styles.sidebarHeaderDark}`}>
+                <div className={styles.skeletonTitle}></div>
+                <div className={styles.skeletonSubtitle}></div>
+              </div>
+              <div className={styles.skeletonCards}>
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className={styles.skeletonCard}>
+                    <div className={styles.skeletonImage}></div>
+                    <div className={styles.skeletonContent}>
+                      <div className={styles.skeletonText}></div>
+                      <div className={styles.skeletonText}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </aside>
+
+            {/* Main Content Skeleton */}
+            <main className={styles.mainContent}>
+              <div className={styles.skeletonHeader}>
+                <div className={styles.skeletonTitle}></div>
+                <div className={styles.skeletonSubtitle}></div>
+              </div>
+              <div className={styles.skeletonHero}></div>
+              <div className={styles.skeletonSection}>
+                <div className={styles.skeletonTitle}></div>
+                <div className={styles.skeletonText}></div>
               </div>
             </main>
           </div>
