@@ -97,7 +97,7 @@ export default function AboutPage() {
                   <div className={styles.educationDetails}>
                     <h3>Bachelor of Optometry</h3>
                     <span className={styles.institution}>Munich University of Applied Sciences</span>
-                    <span className={styles.period}>2018 - 2022</span>
+                    <span className={styles.period}>2025 - present</span>
                   </div>
                 </div>
                 <p>Practice-oriented program covering optometry, vision science, anatomy, physiology, and business aspects, including hands-on training.</p>
