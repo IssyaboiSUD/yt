@@ -191,10 +191,10 @@ export default function Home() {
               <div className={styles.carouselContainer}>
                 <div className={styles.carouselTrack}>
                   {projects.map((project, index) => (
-                    <Link
+                    <div
                       key={project.id}
-                      href={`/projects?selected=${project.id}`}
                       className={`${styles.carouselCard} ${index === activeCardIndex ? styles.carouselCardActive : ''} ${isTransitioning ? styles.carouselCardTransitioning : ''}`}
+                      onClick={() => window.location.href = `/projects?selected=${project.id}`}
                     >
                       <div className={styles.cardImageContainer}>
                         <img 
@@ -250,7 +250,7 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
                 
