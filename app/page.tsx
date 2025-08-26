@@ -193,7 +193,7 @@ export default function Home() {
                   {projects.map((project, index) => (
                     <div
                       key={project.id}
-                      className={`${styles.carouselCard} ${index === activeCardIndex ? styles.carouselCardActive : ''} ${isTransitioning ? styles.carouselCardTransitioning : ''}`}
+                      className={`${styles.carouselCard} ${isTransitioning ? styles.carouselCardTransitioning : ''}`}
                       onClick={() => window.location.href = `/projects?selected=${project.id}`}
                     >
                       <div className={styles.cardImageContainer}>
@@ -268,7 +268,7 @@ export default function Home() {
                     {projects.map((_, index) => (
                       <button
                         key={index}
-                        className={`${styles.carouselDot} ${index === activeCardIndex ? styles.carouselDotActive : ''}`}
+                        className={styles.carouselDot}
                         onClick={() => goToProject(index)}
                         disabled={isTransitioning}
                       />

@@ -717,10 +717,213 @@
     padding: 80px 0;
   }
   
-
-  
   .skillsGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Enhanced tablet styles */
+  .heroContent {
+    gap: 50px;
+    text-align: center;
+  }
+  
+  .heroLeft {
+    order: 2;
+  }
+  
+  .heroRight {
+    order: 1;
+  }
+  
+  .profileCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+  }
+  
+  .statCard {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .statNumber {
+    color: #00ff88;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  
+  .statLabel {
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  .educationItem,
+  .experienceItem {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .educationItem:hover,
+  .experienceItem:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .educationDetails h3,
+  .experienceDetails h3 {
+    color: #00ff88;
+    margin-bottom: 8px;
+  }
+  
+  .institution,
+  .company {
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .period {
+    color: #00ff88;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .educationDescription,
+  .experienceDescription {
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 16px 0;
+  }
+  
+  .achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  
+  .achievementTag {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+  }
+  
+  .skillCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .skillCard:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 255, 136, 0.1);
+  }
+  
+  .skillIcon {
+    background: rgba(0, 255, 136, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skillIcon img {
+    width: 28px;
+    height: 28px;
+    filter: none !important;
+  }
+  
+  .skillName {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .skillCard p {
+    color: #00ff88;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .languageCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .languageCard:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .languageFlag {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .languageFlag img {
+    width: 28px;
+    height: 28px;
+    filter: none !important;
+  }
+  
+  .languageInfo h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  
+  .languageInfo p {
+    color: #00ff88;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .downloadBtn {
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+    color: #000000;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+  }
+  
+  .downloadBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5);
+    background: linear-gradient(135deg, #00ff88 0%, #00ffaa 100%);
   }
 }
 
@@ -909,5 +1112,210 @@
     justify-content: center;
     padding: 14px 20px;
     font-size: 0.9rem;
+  }
+  
+  /* Additional mobile improvements */
+  .heroContent {
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .heroLeft {
+    order: 2;
+  }
+  
+  .heroRight {
+    order: 1;
+  }
+  
+  .profileCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+  }
+  
+  .statCard {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .statNumber {
+    color: #00ff88;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  
+  .statLabel {
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  .educationItem,
+  .experienceItem {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .educationItem:hover,
+  .experienceItem:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .educationDetails h3,
+  .experienceDetails h3 {
+    color: #00ff88;
+    margin-bottom: 8px;
+  }
+  
+  .institution,
+  .company {
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .period {
+    color: #00ff88;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .educationDescription,
+  .experienceDescription {
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 16px 0;
+  }
+  
+  .achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .achievementTag {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+  }
+  
+  .skillCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .skillCard:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 255, 136, 0.1);
+  }
+  
+  .skillIcon {
+    background: rgba(0, 255, 136, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 auto 16px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skillIcon img {
+    width: 24px;
+    height: 24px;
+    filter: none !important;
+  }
+  
+  .skillName {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .skillCard p {
+    color: #00ff88;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .languageCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .languageCard:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .languageFlag {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .languageFlag img {
+    width: 24px;
+    height: 24px;
+    filter: none !important;
+  }
+  
+  .languageInfo h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  
+  .languageInfo p {
+    color: #00ff88;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .downloadBtn {
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+    color: #000000;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+  }
+  
+  .downloadBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5);
+    background: linear-gradient(135deg, #00ff88 0%, #00ffaa 100%);
   }
 } 
