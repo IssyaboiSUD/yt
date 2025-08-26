@@ -235,3 +235,68 @@ input {
 .footerCreator:hover {
   color: #1ed760;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .globalNavigation .navContainer {
+    padding: 0 20px;
+    height: 70px;
+  }
+  
+  .globalNavigation .navLogo {
+    font-size: 1.25rem;
+  }
+  
+  .globalNavigation .navLinks {
+    gap: 12px;
+    padding: 6px;
+  }
+  
+  .globalNavigation .navLink {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .globalNavigation .navLink svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .footerContent {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .globalNavigation .navContainer {
+    padding: 0 16px;
+    height: 60px;
+  }
+  
+  .globalNavigation .navLogo {
+    font-size: 1.125rem;
+  }
+  
+  .globalNavigation .navLinks {
+    gap: 8px;
+    padding: 4px;
+  }
+  
+  .globalNavigation .navLink {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .globalNavigation .navLink svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .footerContent {
+    padding: 0 16px;
+  }
+  
+  .footerText {
+    font-size: 0.8rem;
+  }
+}

@@ -909,4 +909,65 @@
   .socialLink {
     justify-content: center;
   }
+  
+  /* Enhanced mobile styles */
+  .heroTitle {
+    font-size: clamp(2.5rem, 10vw, 3rem);
+    line-height: 1.1;
+  }
+  
+  .heroSubtitle {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .heroActions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .projectsGrid {
+    gap: 20px;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .skillCard {
+    padding: 20px 16px;
+  }
+  
+  .skillIconContainer {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .skillIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .skillName {
+    font-size: 1rem;
+  }
+  
+  .skillCategory {
+    font-size: 0.75rem;
+  }
 }

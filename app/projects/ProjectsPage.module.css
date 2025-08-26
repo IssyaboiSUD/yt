@@ -1158,4 +1158,127 @@
     width: 100%;
     justify-content: center;
   }
+  
+  /* Enhanced mobile styles */
+  .projectTitle {
+    font-size: clamp(1.75rem, 8vw, 2rem);
+    line-height: 1.2;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(1.25rem, 6vw, 1.5rem);
+  }
+  
+  .heroImage {
+    height: 200px;
+    border-radius: 16px;
+  }
+  
+  .mainContent {
+    padding: 20px 16px;
+  }
+  
+  .contentSection {
+    gap: 24px;
+  }
+  
+  .section {
+    padding: 24px 0;
+  }
+  
+  .overviewGrid,
+  .challengeGrid,
+  .outcomeGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .overviewItem,
+  .challengeItem,
+  .outcomeItem {
+    padding: 20px;
+  }
+  
+  .overviewItem h3,
+  .challengeItem h3,
+  .outcomeItem h3 {
+    font-size: 1.125rem;
+    margin-bottom: 12px;
+  }
+  
+  .overviewItem p,
+  .challengeItem p,
+  .outcomeItem p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .featureItem {
+    padding: 16px;
+  }
+  
+  .featureItem h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .featureItem p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .technologiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .technologyItem {
+    padding: 12px;
+    font-size: 0.875rem;
+  }
+  
+  .linksContainer {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .linkButton {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .carouselCard {
+    min-width: 280px;
+    padding: 20px;
+  }
+  
+  .carouselCard h3 {
+    font-size: 1.25rem;
+  }
+  
+  .carouselCard p {
+    font-size: 0.875rem;
+  }
+  
+  .carouselNavigation {
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .carouselNavButton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .carouselNavIcon {
+    width: 16px;
+    height: 16px;
+  }
 } 

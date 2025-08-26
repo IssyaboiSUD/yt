@@ -744,4 +744,170 @@
   .projectCard {
     padding: 24px;
   }
+  
+  /* Enhanced mobile styles */
+  .navContainer,
+  .content {
+    padding: 0 16px;
+  }
+  
+  .hero {
+    padding: 60px 0 40px 0;
+  }
+  
+  .heroTitle {
+    font-size: clamp(1.75rem, 8vw, 2rem);
+    line-height: 1.2;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .heroStats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .statItem {
+    padding: 16px;
+  }
+  
+  .statNumber {
+    font-size: 1.5rem;
+  }
+  
+  .statLabel {
+    font-size: 0.875rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+  }
+  
+  .educationSection,
+  .experienceSection,
+  .skillsSection,
+  .languagesSection {
+    padding: 60px 0;
+  }
+  
+  .educationList,
+  .experienceList {
+    gap: 32px;
+  }
+  
+  .educationItem,
+  .experienceItem {
+    padding: 20px;
+  }
+  
+  .educationHeader,
+  .experienceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+  }
+  
+  .educationLogo,
+  .experienceLogo {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .educationDetails h3,
+  .experienceDetails h3 {
+    font-size: 1.25rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .skillItem {
+    padding: 20px 16px;
+  }
+  
+  .skillIcon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+  }
+  
+  .skillName {
+    font-size: 1rem;
+  }
+  
+  .languagesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .languageItem {
+    padding: 20px;
+  }
+  
+  .languageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+  }
+  
+  .languageFlag {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .languageInfo h3 {
+    font-size: 1.25rem;
+  }
+  
+  .profileCard {
+    padding: 24px;
+  }
+  
+  .profileImage {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .profileName {
+    font-size: 1.5rem;
+  }
+  
+  .profileDescription {
+    font-size: 0.9rem;
+  }
+  
+  .socialLinks {
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .socialLink {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .socialLink img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .downloadSection {
+    margin-top: 20px;
+  }
+  
+  .downloadBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
 } 

@@ -57,7 +57,7 @@ export default function AboutPage() {
                       </a>
                     </div>
                     <div className={styles.downloadSection}>
-                      <a href="/resume.pdf" download className={styles.downloadBtn}>
+                      <a href="/Resume.pdf" download className={styles.downloadBtn}>
                         Download CV
                       </a>
                     </div>

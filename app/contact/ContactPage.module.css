@@ -620,4 +620,81 @@
     width: 18px;
     height: 18px;
   }
+  
+  /* Enhanced mobile styles */
+  .title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    font-size: clamp(1rem, 4vw, 1.125rem);
+    line-height: 1.4;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(1.5rem, 6vw, 1.75rem);
+  }
+  
+  .illustrationTitle {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+  }
+  
+  .illustrationText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .form {
+    gap: 20px;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formGroup {
+    width: 100%;
+  }
+  
+  .input,
+  .textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 14px 16px;
+  }
+  
+  .submitButton {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+  
+  .contactInfo {
+    gap: 20px;
+  }
+  
+  .contactItem {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contactTitle {
+    font-size: 1.125rem;
+  }
+  
+  .contactLink {
+    font-size: 0.95rem;
+  }
 } 
