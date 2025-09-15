@@ -46,13 +46,13 @@ export default function AboutPage() {
                       Learn and evolve, build and grow.
                     </p>
                     <div className={styles.socialLinks}>
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                      <a href="https://github.com/IssyaboiSUD" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                         <img src="/github.png" alt="GitHub" />
                       </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                      <a href="https://linkedin.com/in/sudarshan-dahal-a5738823a/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                         <img src="/linkedin.png" alt="LinkedIn" />
                       </a>
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                      <a href="https://instagram.com/sudarschan" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                         <img src="/instagram.png" alt="Instagram" />
                       </a>
                     </div>

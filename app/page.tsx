@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
 import { ArrowRight, Github, Linkedin, Mail, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -9,6 +9,7 @@ import Link from 'next/link';
 export default function Home() {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [carouselRef, setCarouselRef] = useState<HTMLDivElement | null>(null);
 
   const projects = [
     {
@@ -67,22 +68,56 @@ export default function Home() {
   const nextProject = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setActiveCardIndex((prev) => (prev + 1) % projects.length);
+    const nextIndex = (activeCardIndex + 1) % projects.length;
+    setActiveCardIndex(nextIndex);
+    scrollToCard(nextIndex);
     setTimeout(() => setIsTransitioning(false), 300);
   };
 
   const prevProject = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setActiveCardIndex((prev) => (prev - 1 + projects.length) % projects.length);
+    const prevIndex = (activeCardIndex - 1 + projects.length) % projects.length;
+    setActiveCardIndex(prevIndex);
+    scrollToCard(prevIndex);
     setTimeout(() => setIsTransitioning(false), 300);
   };
+
+  const scrollToCard = (index: number) => {
+    if (!carouselRef) return;
+    const cardWidth = 320 + 32; // card width + gap
+    const containerWidth = carouselRef.clientWidth;
+    const scrollPosition = (index * cardWidth) - (containerWidth / 2) + (cardWidth / 2);
+    carouselRef.scrollTo({
+      left: Math.max(0, scrollPosition),
+      behavior: 'smooth'
+    });
+  };
+
+  // Center the active card on mount and when activeCardIndex changes
+  useEffect(() => {
+    if (carouselRef) {
+      scrollToCard(activeCardIndex);
+    }
+  }, [carouselRef, activeCardIndex]);
 
   const goToProject = (index: number) => {
     if (isTransitioning || index === activeCardIndex) return;
     setIsTransitioning(true);
     setActiveCardIndex(index);
+    scrollToCard(index);
     setTimeout(() => setIsTransitioning(false), 300);
+  };
+
+  // Mouse wheel support for carousel
+  const handleWheel = (e: React.WheelEvent) => {
+    if (isTransitioning) return;
+    e.preventDefault();
+    if (e.deltaY > 0) {
+      nextProject();
+    } else {
+      prevProject();
+    }
   };
 
   return (
@@ -189,11 +224,15 @@ export default function Home() {
             
             <div className={styles.projectsCarousel}>
               <div className={styles.carouselContainer}>
-                <div className={styles.carouselTrack}>
+                <div 
+                  className={styles.carouselTrack}
+                  ref={setCarouselRef}
+                  onWheel={handleWheel}
+                >
                   {projects.map((project, index) => (
                     <div
                       key={project.id}
-                      className={`${styles.carouselCard} ${isTransitioning ? styles.carouselCardTransitioning : ''}`}
+                      className={`${styles.carouselCard} ${index === activeCardIndex ? styles.carouselCardActive : ''} ${isTransitioning ? styles.carouselCardTransitioning : ''}`}
                       onClick={() => window.location.href = `/projects?selected=${project.id}`}
                     >
                       <div className={styles.cardImageContainer}>
@@ -271,6 +310,7 @@ export default function Home() {
                         className={styles.carouselDot}
                         onClick={() => goToProject(index)}
                         disabled={isTransitioning}
+                        data-active={index === activeCardIndex}
                       />
                     ))}
                   </div>
